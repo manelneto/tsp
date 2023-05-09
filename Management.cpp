@@ -50,6 +50,17 @@ int Management::validateInt(int n, int min, int max) {
     return n;
 }
 
+int Management::validateInt(int n, const unordered_set<int> &valid) {
+    while (valid.find(n) == valid.end()) {
+        cout << "O número inserido não é valido (deve pertencer ao conjunto {";
+        for (const int &v : valid)
+            cout << v << ", ";
+        cout << "}). Tente novamente: ";
+        n = readInt();
+    }
+    return n;
+}
+
 bool Management::menu() {
     cout << "\nMenu Principal:\n"
             "1 - Ler ficheiros de dados\n"
@@ -134,7 +145,7 @@ bool Management::readEdgesFile() {
     return true;
 }
 
-bool Management::readGraphFile() {
+bool Management::readGraphFile(bool header) {
     ifstream in("../files/" + graphFile);
     if (!in.is_open()) {
         cout << "Erro ao abrir o ficheiro " << graphFile << "." << endl;
@@ -143,7 +154,8 @@ bool Management::readGraphFile() {
     }
     cout << "\nA ler ficheiro " << graphFile << "..." << endl;
     string line;
-    getline(in, line);
+    if (header)
+        getline(in, line);
     unsigned counter = 0;
     unsigned errors = 0;
     unsigned last = 0;
@@ -181,34 +193,24 @@ bool Management::readGraphFile() {
 }
 
 void Management::readDataset() {
-    cout << "A limpar dados..." << endl;
-    graph.clear();
+    if (graph.size()) {
+        cout << "A limpar dados..." << endl;
+        graph.clear();
+    }
     cout << "\nGrafo a Ler:\n"
-            "1 - Real-World-Graph\n"
-            "2 - Toy-Graph\n"
+            "1 - Toy\n"
+            "2 - Medium-Size\n"
+            "3 - Real-World\n"
             "0 - Retroceder\n"
             "Opção: ";
     int option = readInt();
-    option = validateInt(option, 0, 2);
+    option = validateInt(option, 0, 3);
     if (option == 1)
-        readRealWorldGraph();
-    else if (option == 2)
         readToyGraph();
-}
-
-void Management::readRealWorldGraph() {
-    string path = "Real-World-Graphs/graph";
-    cout << "\nReal-World-Graph (1, 2, 3): ";
-    int option = readInt();
-    option = validateInt(option, 1, 3);
-    path += (char) ('0' + option);
-    nodesFile = path + "/nodes.csv";
-    edgesFile = path + "/edges.csv";
-    bool nodesRead = readNodesFile();
-    cout << endl;
-    bool edgesRead = readEdgesFile();
-    cout << endl;
-    filesRead = nodesRead && edgesRead;
+    else if (option == 2)
+        readMediumSizeGraph();
+    else if (option == 3)
+        readRealWorldGraph();
 }
 
 void Management::readToyGraph() {
@@ -227,14 +229,45 @@ void Management::readToyGraph() {
     else
         path += "/tourism.csv";
     graphFile = path;
-    filesRead = readGraphFile();
+    filesRead = readGraphFile(true);
+}
+
+void Management::readMediumSizeGraph() {
+    string path = "Extra_Fully_Connected_Graphs/edges_";
+    cout << "\nNúmero de Arestas (25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900): ";
+    int option = readInt();
+    unordered_set<int> valid = {25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900};
+    option = validateInt(option, valid);
+    string n;
+    while (option > 0) {
+        n += (char) ('0' + (option % 10));
+        option /= 10;
+    }
+    for (auto it = n.rbegin(); it != n.rend(); it++)
+        path += *it;
+    path += ".csv";
+    graphFile = path;
+    filesRead = readGraphFile(false);
+}
+
+void Management::readRealWorldGraph() {
+    string path = "Real-world Graphs/graph";
+    cout << "\nReal-World-Graph (1, 2, 3): ";
+    int option = readInt();
+    option = validateInt(option, 1, 3);
+    path += (char) ('0' + option);
+    nodesFile = path + "/nodes.csv";
+    edgesFile = path + "/edges.csv";
+    bool nodesRead = readNodesFile();
+    cout << endl;
+    bool edgesRead = readEdgesFile();
+    cout << endl;
+    filesRead = nodesRead && edgesRead;
 }
 
 void Management::checkDataset() {
     while (!filesRead) {
-        cout
-                << "Ainda não leu os ficheiros de dados (ou ocorreu um erro durante a leitura), pelo que não existem dados para analisar."
-                << endl;
+        cout << "Ainda não leu os ficheiros de dados (ou ocorreu um erro durante a leitura), pelo que não existem dados para analisar." << endl;
         cout << endl;
         readDataset();
     }

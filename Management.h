@@ -7,6 +7,7 @@
 
 
 #include <string>
+#include <unordered_set>
 #include "Graph.h"
 
 class Management {
@@ -57,6 +58,16 @@ private:
      */
     static int validateInt(int n, int min, int max);
 
+
+    /**@brief Valida um número inteiro, isto é, verifica se n pertence ao conjunto valid. Enquanto o número for inválido, tenta ler um número válido.
+     *
+     * Complexidade Temporal: O(n), sendo n a posição do primeiro input válido introduzido pelo utilizador
+     * @param n número a validar
+     * @param valid conjunto de números válidos
+     * @return número inteiro válido introduzido pelo utilizador
+     */
+    static int validateInt(int n, const std::unordered_set<int> &valid);
+
     /**@brief Lê o ficheiro de nós e cria os nós do grafo.
      *
      * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro de nós
@@ -74,9 +85,10 @@ private:
     /**@brief Lê o ficheiro do grafo e cria-o.
      *
      * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro do grafo
+     * @param header true se a primeira linha do ficheiro do grafo é um cabeçalho, false caso contrário
      * @return true se a leitura do ficheiro do grafo foi bem-sucedida, false caso contrário
      */
-    bool readGraphFile();
+    bool readGraphFile(bool header);
 
     /**@brief Lê os ficheiros de dados, depois de limpar os dados anteriores.
      *
@@ -84,17 +96,23 @@ private:
      */
     void readDataset();
 
-    /**@brief Lê um Real-World-Graph.
-     *
-     * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro de nós/arestas
-     */
-    void readRealWorldGraph();
-
-    /**@brief Lê um Toy-Graph.
+    /**@brief Lê um Toy Graph.
      *
      * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro do grafo
      */
     void readToyGraph();
+
+    /**@brief Lê um Medium-Size Graph
+     *
+     * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro do grafo
+     */
+    void readMediumSizeGraph();
+
+    /**@brief Lê um Real-World Graph.
+     *
+     * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro de nós/arestas
+     */
+    void readRealWorldGraph();
 
     /**@brief Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar. Em caso negativo, lê os ficheiros de dados.
      *

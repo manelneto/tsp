@@ -69,8 +69,7 @@ void Graph::tspBacktracking(unsigned currentIndex, double currentDist, unsigned 
                     unvisited = false;
                     break;
                 }
-            edge = findVertex(currentPath[currentIndex - 1])->getEdge(findVertex(i));
-            if (unvisited && edge) {
+            if (unvisited) {
                 currentPath[currentIndex] = i;
                 tspBacktracking(currentIndex + 1, currentDist + edge->getDistance(), currentPath, minDist, path);
             }

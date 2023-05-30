@@ -53,6 +53,7 @@ public:
 
     /**@brief Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
      *
+     * Complexidade Temporal: O(V!), sendo V o número de vértices
      * @param path circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      * @return peso do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
@@ -63,6 +64,7 @@ private:
 
     /**@brief Função auxiliar recursiva para resolver o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
      *
+     * Complexidade Temporal: O(V!), sendo V o número de vértices
      * @param currentIndex índice atual do nó a analisar no circuito
      * @param currentDist distância (peso) atual do circuito encontrado
      * @param currentPath circuito encontrado até ao momento

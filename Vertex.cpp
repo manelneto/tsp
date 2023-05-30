@@ -25,6 +25,13 @@ Edge *Vertex::addEdge(Vertex *dest, double distance) {
     return newEdge;
 }
 
+const Edge * Vertex::getEdge(Vertex * vertex) const {
+    for (const Edge * edge : adj)
+        if (edge->getDest()->getId() == vertex->getId())
+            return edge;
+    return nullptr;
+}
+
 void Vertex::removeOutgoingEdges() {
     auto it = adj.begin();
     while (it != adj.end()) {

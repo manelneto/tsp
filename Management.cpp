@@ -275,7 +275,13 @@ void Management::checkDataset() {
 
 void Management::backtrackingAlgorithm() {
     checkDataset();
-    // TODO
+    unsigned path[graph.size()];
+    double res = graph.tspBacktracking(path);
+    cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
+    for (unsigned p : path)
+        cout << p << " -> ";
+    cout << "0" << endl;
+    cout << "\nO peso do circuito é " << res << endl;
 }
 
 void Management::triangularApproximationHeuristic() {

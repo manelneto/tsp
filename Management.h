@@ -120,6 +120,10 @@ private:
      */
     void checkDataset();
 
+    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
+     *
+     * Complexidade Temporal: O(n!), sendo n o número de nós do grafo a analisar
+     */
     void backtrackingAlgorithm();
 
     void triangularApproximationHeuristic();

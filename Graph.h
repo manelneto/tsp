@@ -37,13 +37,13 @@ public:
      * @param distance distância da aresta a adicionar
      * @return true se a operação foi bem-sucedida, false caso contrário (não existe no grafo nenhum vértice com id orig ou com id dest)
      */
-    bool addEdge(const unsigned &orig, const unsigned &dest, const double &distance);
+    bool addEdge(const unsigned &orig, const unsigned &dest, const double &distance) const;
 
     /**@brief Retorna o tamanho (número de nós) do grafo
      *
      * @return tamanho (número de nós) do grafo
      */
-    unsigned size();
+    unsigned size() const;
 
     /**@brief Limpa o grafo, i. e., remove todas as suas arestas e todos os seus vértices.
      *
@@ -51,8 +51,25 @@ public:
      */
     void clear();
 
+    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
+     *
+     * @param path circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @return peso do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     */
+    double tspBacktracking(unsigned path[]) const;
+
 private:
     std::vector<Vertex *> vertexSet;
+
+    /**@brief Função auxiliar recursiva para resolver o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
+     *
+     * @param currentIndex índice atual do nó a analisar no circuito
+     * @param currentDist distância (peso) atual do circuito encontrado
+     * @param currentPath circuito encontrado até ao momento
+     * @param minDist distância mínima (peso mínimo) do circuito encontrado até ao momento
+     * @param path circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     */
+    void tspBacktracking(unsigned currentIndex, double currentDist, unsigned currentPath[], double &minDist, unsigned path[]) const;
 };
 
 

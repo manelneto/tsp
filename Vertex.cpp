@@ -51,3 +51,7 @@ void Vertex::deleteEdge(Edge *edge) const {
             it++;
     delete edge;
 }
+
+double Vertex::calculateDistance(Vertex *vertex) const {
+
+}

@@ -63,6 +63,13 @@ public:
      */
     void removeOutgoingEdges();
 
+    /**@brief Calcula a distância entre o vértice e vertex através do método de Haversine.
+     *
+     * @param vertex vértice de destino para o cálculo da distância
+     * @return distância entre o vértice e vertex
+     */
+    double calculateDistance(Vertex * vertex) const;
+
 private:
     unsigned id;
     double longitude;

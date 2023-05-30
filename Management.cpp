@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <list>
 #include <stdexcept>
+#include <chrono>
 
 using namespace std;
 
@@ -276,12 +277,15 @@ void Management::checkDataset() {
 void Management::backtrackingAlgorithm() {
     checkDataset();
     unsigned path[graph.size()];
+    auto start = chrono::high_resolution_clock::now();
     double res = graph.tspBacktracking(path);
+    auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
     for (unsigned p : path)
         cout << p << " -> ";
     cout << "0" << endl;
-    cout << "\nO peso do circuito é " << res << endl;
+    cout << "\nO peso do circuito é " << res << "." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end- start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }
 
 void Management::triangularApproximationHeuristic() {

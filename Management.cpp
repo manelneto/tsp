@@ -290,7 +290,17 @@ void Management::backtrackingAlgorithm() {
 
 void Management::triangularApproximationHeuristic() {
     checkDataset();
-    // TODO
+    unsigned path[graph.size()];
+    auto start = chrono::high_resolution_clock::now();
+    double res = graph.tspTriangularApproximation(path);
+    auto end = chrono::high_resolution_clock::now();
+    cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
+    for (unsigned p : path)
+        cout << p << " -> ";
+    cout << "0" << endl;
+    cout << "\nO peso do circuito é " << res << "." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end- start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    graph.prim(); // ??
 }
 
 void Management::ourHeuristic() {

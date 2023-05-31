@@ -300,7 +300,6 @@ void Management::triangularApproximationHeuristic() {
     cout << "0" << endl;
     cout << "\nO peso do circuito é " << res << "." << endl;
     cout << "\nO algoritmo demorou cerca de " << (end- start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
-    graph.prim(); // ??
 }
 
 void Management::ourHeuristic() {

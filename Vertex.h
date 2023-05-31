@@ -121,6 +121,13 @@ public:
      */
     void removeOutgoingEdges();
 
+    /**@brief Realiza uma Pesquisa em Profundidade (DFS) em pré-ordem a partir do vértice.
+     *
+     * Complexidade Temporal: O(V + E), sendo V o número de vértices do grafo em que o vértice está inserido e E o número de arestas do grafo em que o vértice está inserido
+     * @param preorder travessia em pré-ordem determinada
+     */
+    void dfsPreorder(std::vector<unsigned> &preorder);
+
     /**@brief Calcula a distância entre o vértice e vertex através do método de Haversine.
      *
      * @param vertex vértice de destino para o cálculo da distância

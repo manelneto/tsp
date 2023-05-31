@@ -86,6 +86,16 @@ void Vertex::deleteEdge(Edge *edge) const {
     delete edge;
 }
 
+void Vertex::dfsPreorder(vector<unsigned> &preorder) {
+    this->visited = true;
+    preorder.push_back(this->id);
+    for (auto edge : this->adj) {
+        auto v = edge->getDest();
+        if (!v->isVisited())
+            v->dfsPreorder(preorder);
+    }
+}
+
 double Vertex::calculateDistance(Vertex *vertex) const {
     // HAVERSINE (void?)
     return 0.0;

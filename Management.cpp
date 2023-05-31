@@ -197,15 +197,15 @@ void Management::readDataset() {
     if (graph.size()) {
         cout << "A limpar dados..." << endl;
         graph.clear();
+        filesRead = false;
     }
     cout << "\nGrafo a Ler:\n"
             "1 - Toy\n"
             "2 - Medium-Size\n"
             "3 - Real-World\n"
-            "0 - Retroceder\n"
             "Opção: ";
     int option = readInt();
-    option = validateInt(option, 0, 3);
+    option = validateInt(option, 1, 3);
     if (option == 1)
         readToyGraph();
     else if (option == 2)
@@ -276,30 +276,33 @@ void Management::checkDataset() {
 
 void Management::backtrackingAlgorithm() {
     checkDataset();
-    unsigned path[graph.size()];
+    vector<unsigned> path;
     auto start = chrono::high_resolution_clock::now();
-    double res = graph.tspBacktracking(path);
+    double cost = graph.tspBacktracking(path);
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
     for (unsigned p : path)
         cout << p << " -> ";
     cout << "0" << endl;
-    cout << "\nO peso do circuito é " << res << "." << endl;
-    cout << "\nO algoritmo demorou cerca de " << (end- start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    cout << "\nO custo do circuito é " << cost << "." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }
 
 void Management::triangularApproximationHeuristic() {
     checkDataset();
-    unsigned path[graph.size()];
+    vector<unsigned> path;
     auto start = chrono::high_resolution_clock::now();
-    double res = graph.tspTriangularApproximation(path);
+    pair<double, double> circuit = graph.tspTriangularApproximation(path);
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
     for (unsigned p : path)
         cout << p << " -> ";
     cout << "0" << endl;
-    cout << "\nO peso do circuito é " << res << "." << endl;
-    cout << "\nO algoritmo demorou cerca de " << (end- start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    double mst = circuit.first;
+    double cost = circuit.second;
+    cout << "\nO custo da Minimum Cost Spanning Tree (MST) determinada para a heurística é " << mst << ". Este custo é um limite inferior para o custo do circuito." << endl;
+    cout << "O custo do circuito é " << cost << "." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }
 
 void Management::ourHeuristic() {

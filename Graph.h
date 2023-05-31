@@ -29,7 +29,7 @@ public:
      */
     bool addVertex(const unsigned &id, const double &longitude = 0.0, const double &latitude = 0.0);
 
-    /**@brief Adiciona ao grafo uma aresta com origem no vértice de id orig e destino no vértice de id dest, com distância distance.
+    /**@brief Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id dest, com distância distance.
      *
      * Complexidade Temporal: O(1)
      * @param orig id do vértice de origem da aresta a adicionar
@@ -54,10 +54,19 @@ public:
     /**@brief Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.
      *
      * Complexidade Temporal: O(V!), sendo V o número de vértices
-     * @param path circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
-     * @return peso do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @return custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
-    double tspBacktracking(unsigned path[]) const;
+    double tspBacktracking(std::vector<unsigned> &circuit) const;
+
+    /**
+     * @brief Resolve o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
+     *
+     * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo
+     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @return par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada para a heurística e o segundo valor é o custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     */
+    std::pair<double, double> tspTriangularApproximation(std::vector<unsigned> &circuit) const;
 
 private:
     std::vector<Vertex *> vertexSet;
@@ -69,9 +78,17 @@ private:
      * @param currentDist distância (peso) atual do circuito encontrado
      * @param currentPath circuito encontrado até ao momento
      * @param minDist distância mínima (peso mínimo) do circuito encontrado até ao momento
-     * @param path circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
-    void tspBacktracking(unsigned currentIndex, double currentDist, unsigned currentPath[], double &minDist, unsigned path[]) const;
+    void tspBacktracking(unsigned currentIndex, double currentDist, std::vector<unsigned> &currentPath, double &minDist, std::vector<unsigned> &circuit) const;
+
+    /**
+     * @brief Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim.
+     *
+     * Complexidade Temporal: O(E log(V)), sendo V o número de vértices do grafo e E o número de arestas do grafo
+     * @return par cujo primeiro valor é a Minimum Cost Spanning Tree (MST) determinada e o segundo valor é o custo da Minimum Cost Spanning Tree (MST) determinada
+     */
+    std::pair<Graph, double> mstPrim() const;
 };
 
 

@@ -128,7 +128,7 @@ private:
 
     /**@brief Resolve o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
      *
-     * Complexidade Temporal: O(?), sendo V o número de vértices do grafo a analisar e E o número de arestas do grafo a analisar
+     * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo a analisar
      */
     void triangularApproximationHeuristic();
 

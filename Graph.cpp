@@ -3,8 +3,10 @@
 //
 
 #include "Graph.h"
+#include "MutablePriorityQueue.h"
 
 #include <limits>
+#include <climits>
 
 using namespace std;
 
@@ -41,23 +43,38 @@ void Graph::clear() {
     vertexSet.clear();
 }
 
-double Graph::tspBacktracking(unsigned path[]) const {
-    unsigned currentPath[vertexSet.size()];
+double Graph::tspBacktracking(vector<unsigned> &circuit) const {
+    vector<unsigned> currentPath(vertexSet.size());
     double minDist = numeric_limits<unsigned>::max();
     currentPath[0] = 0;
-    tspBacktracking(1, 0, currentPath, minDist, path);
+    tspBacktracking(1, 0, currentPath, minDist, circuit);
     return minDist;
 }
 
-void Graph::tspBacktracking(unsigned currentIndex, double currentDist, unsigned currentPath[], double &minDist, unsigned path[]) const {
+std::pair<double, double> Graph::tspTriangularApproximation(vector<unsigned> &circuit) const {
+    pair<Graph, double> prim = mstPrim();
+    Graph mst = prim.first;
+    double cost = 0.0;
+    for (unsigned i = 0; i < mst.size(); i++) {
+        Vertex * vertex = mst.findVertex(i);
+        if (!vertex->isVisited())
+            vertex->dfsPreorder(circuit);
+    }
+    for (unsigned i = 0; i < circuit.size() - 1; i++)
+        cost += findVertex(circuit[i])->getEdge(findVertex(circuit[i + 1]))->getDistance();
+
+    cost += findVertex(circuit.back())->getEdge(findVertex(0))->getDistance();
+    return make_pair(prim.second, cost);
+}
+
+void Graph::tspBacktracking(unsigned currentIndex, double currentDist, vector<unsigned> &currentPath, double &minDist, vector<unsigned> &circuit) const {
     unsigned size = vertexSet.size();
     const Edge * edge;
     if (currentIndex == size && (edge = findVertex(currentPath[size - 1])->getEdge(findVertex(currentPath[0])))) {
         currentDist += edge->getDistance();
         if (currentDist < minDist) {
             minDist = currentDist;
-            for (unsigned i = 0; i < size; i++)
-                path[i] = currentPath[i];
+            circuit = currentPath;
         }
     }
     for (unsigned i = 1; i < size; i++) {
@@ -71,8 +88,53 @@ void Graph::tspBacktracking(unsigned currentIndex, double currentDist, unsigned 
                 }
             if (unvisited) {
                 currentPath[currentIndex] = i;
-                tspBacktracking(currentIndex + 1, currentDist + edge->getDistance(), currentPath, minDist, path);
+                tspBacktracking(currentIndex + 1, currentDist + edge->getDistance(), currentPath, minDist, circuit);
             }
         }
     }
+}
+
+pair<Graph, double> Graph::mstPrim() const {
+    for (const auto v : vertexSet) {
+        v->setVisited(false);
+        v->setDistance((double) INT_MAX);
+        v->setPath(nullptr);
+    }
+    MutablePriorityQueue<Vertex> q;
+    Vertex* root = findVertex(0);
+    root->setDistance(0.0);
+    q.insert(root);
+    while(!q.empty()) {
+        auto v = q.extractMin();
+        v->setVisited(true);
+        for (const auto &edge : v->getAdj()) {
+            Vertex* u = edge->getDest();
+            if (!u->isVisited()) {
+                double distance = u->getDistance();
+                if (edge->getDistance() < distance) {
+                    u->setDistance(edge->getDistance());
+                    u->setPath(edge);
+                    if (distance == (double) INT_MAX)
+                        q.insert(u);
+                    else
+                        q.decreaseKey(u);
+                }
+            }
+        }
+    }
+
+    Graph mst;
+    double cost = 0;
+    for (const auto v : vertexSet) {
+        v->setVisited(false);
+        mst.addVertex(v->getId(), v->getLongitude(), v->getLatitude());
+    }
+
+    for (const auto v : vertexSet)
+        if (v->getPath()) {
+            mst.addEdge(v->getId(), v->getPath()->getOrig()->getId(), v->getPath()->getDistance());
+            cost += v->getPath()->getDistance();
+        }
+
+    return make_pair(mst, cost);
 }

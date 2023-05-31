@@ -4,7 +4,13 @@
 
 #include "Vertex.h"
 
+using namespace std;
+
 Vertex::Vertex(unsigned id, double longitude, double latitude) : id(id), longitude(longitude), latitude(latitude) {}
+
+bool Vertex::operator<(Vertex &vertex) const {
+    return this->distance < vertex.distance;
+}
 
 unsigned Vertex::getId() const {
     return this->id;
@@ -16,6 +22,34 @@ double Vertex::getLongitude() const {
 
 double Vertex::getLatitude() const {
     return this->latitude;
+}
+
+vector<Edge *> Vertex::getAdj() const {
+    return this->adj;
+}
+
+bool Vertex::isVisited() const {
+    return this->visited;
+}
+
+double Vertex::getDistance() const {
+    return this->distance;
+}
+
+Edge *Vertex::getPath() const {
+    return this->path;
+}
+
+void Vertex::setVisited(bool visited) {
+    this->visited = visited;
+}
+
+void Vertex::setDistance(double distance) {
+    this->distance = distance;
+}
+
+void Vertex::setPath(Edge *path) {
+    this->path = path;
 }
 
 Edge *Vertex::addEdge(Vertex *dest, double distance) {
@@ -53,5 +87,6 @@ void Vertex::deleteEdge(Edge *edge) const {
 }
 
 double Vertex::calculateDistance(Vertex *vertex) const {
-
+    // HAVERSINE (void?)
+    return 0.0;
 }

@@ -8,6 +8,7 @@
 
 #include <vector>
 #include "Edge.h"
+#include "MutablePriorityQueue.h"
 
 class Vertex {
 public:
@@ -19,6 +20,14 @@ public:
      * @param latitude latitude
      */
     Vertex(unsigned id, double longitude, double latitude);
+
+    /**@brief Compara o vértice e vertex quanto à sua distância.
+     *
+     * Complexidade Temporal: O(1)
+     * @param vertex vértice com o qual comparar
+     * @return true se a distância do vértice é inferior à de vertex, false caso contrário
+     */
+    bool operator<(Vertex &vertex) const;
 
     /**@brief Retorna o id do vértice.
      *
@@ -40,6 +49,55 @@ public:
      * @return latitude do vértice
      */
     double getLatitude() const;
+
+    /**@brief Retorna a lista de adjacências (arestas a sair) do vértice.
+     *
+     * Complexidade Temporal: O(1)
+     * @return lista de adjacências (arestas a sair) do vértice
+     */
+    std::vector<Edge *> getAdj() const;
+
+    /**@brief Indica se o vértice foi visitado.
+     *
+     * Complexidade Temporal: O(1)
+     * @return true se o vértice foi visitado, false caso contrário
+     */
+    bool isVisited() const;
+
+    /**@brief Retorna a distância do vértice
+     *
+     * Complexidade Temporal: O(1)
+     * @return distância do vértice
+     */
+    double getDistance() const;
+
+    /**@brief Retorna a aresta predecessora do vértice no caminho atual.
+     *
+     * Complexidade Temporal: O(1)
+     * @return a aresta predecessora do vértice no caminho atual
+     */
+    Edge *getPath() const;
+
+    /**@brief Define estado visitado do vértice como visited.
+     *
+     * Complexidade Temporal: O(1)
+     * @param visited novo estado visitado do vértice
+     */
+    void setVisited(bool visited);
+
+    /**@brief Define a distância do vértice como distance.
+     *
+     * Complexidade Temporal: O(1)
+     * @param cost nova distância do vértice
+     */
+    void setDistance(double distance);
+
+    /**@brief Define a aresta predecessora do vértice como path.
+     *
+     * Complexidade Temporal: O(1)
+     * @param path nova aresta predecessora do vértice
+     */
+    void setPath(Edge *path);
 
     /**@brief Adiciona um aresta desde o vértice até dest, com distância distance.
      *
@@ -70,12 +128,18 @@ public:
      */
     double calculateDistance(Vertex * vertex) const;
 
+    friend class MutablePriorityQueue<Vertex>;
+
 private:
     unsigned id;
     double longitude;
     double latitude;
     std::vector<Edge *> adj;
+    bool visited = false;
+    double distance = 0.0;
+    Edge *path = nullptr;
     std::vector<Edge *> incoming;
+    int queueIndex;
 
     /**@brief Apaga a aresta edge.
      *

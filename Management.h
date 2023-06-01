@@ -58,7 +58,6 @@ private:
      */
     static int validateInt(int n, int min, int max);
 
-
     /**@brief Valida um número inteiro, isto é, verifica se n pertence ao conjunto valid. Enquanto o número for inválido, tenta ler um número válido.
      *
      * Complexidade Temporal: O(n), sendo n a posição do primeiro input válido introduzido pelo utilizador

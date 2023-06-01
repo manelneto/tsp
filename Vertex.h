@@ -6,7 +6,7 @@
 #define TSP_VERTEX_H
 
 
-#include <vector>
+#include <set>
 #include "Edge.h"
 #include "MutablePriorityQueue.h"
 
@@ -27,7 +27,7 @@ public:
      * @param vertex vértice com o qual comparar
      * @return true se a distância do vértice é inferior à de vertex, false caso contrário
      */
-    bool operator<(Vertex &vertex) const;
+    bool operator<(const Vertex &vertex) const;
 
     /**@brief Retorna o id do vértice.
      *
@@ -55,7 +55,7 @@ public:
      * Complexidade Temporal: O(1)
      * @return lista de adjacências (arestas a sair) do vértice
      */
-    std::vector<Edge *> getAdj() const;
+    std::multiset<Edge *, edgeCmp> getAdj() const;
 
     /**@brief Indica se o vértice foi visitado.
      *
@@ -101,7 +101,7 @@ public:
 
     /**@brief Adiciona um aresta desde o vértice até dest, com distância distance.
      *
-     * Complexidade Temporal: O(1)
+     * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências do vértice
      * @param dest destino da aresta
      * @param distance distância da aresta
      * @return aresta adicionada ao vértice
@@ -150,11 +150,11 @@ private:
     unsigned id;
     double longitude;
     double latitude;
-    std::vector<Edge *> adj;
+    std::multiset<Edge *, edgeCmp> adj;
     bool visited = false;
     double distance = 0.0;
     Edge *path = nullptr;
-    std::vector<Edge *> incoming;
+    std::multiset<Edge *, edgeCmp> incoming;
     int queueIndex;
 
     /**@brief Apaga a aresta edge.

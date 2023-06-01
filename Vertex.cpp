@@ -10,7 +10,7 @@ using namespace std;
 
 Vertex::Vertex(unsigned id, double longitude, double latitude) : id(id), longitude(longitude), latitude(latitude) {}
 
-bool Vertex::operator<(Vertex &vertex) const {
+bool Vertex::operator<(const Vertex &vertex) const {
     return this->distance < vertex.distance;
 }
 
@@ -26,7 +26,7 @@ double Vertex::getLatitude() const {
     return this->latitude;
 }
 
-vector<Edge *> Vertex::getAdj() const {
+multiset<Edge *, edgeCmp> Vertex::getAdj() const {
     return this->adj;
 }
 
@@ -56,8 +56,8 @@ void Vertex::setPath(Edge *path) {
 
 Edge *Vertex::addEdge(Vertex *dest, double distance) {
     Edge * newEdge = new Edge(this, dest, distance);
-    adj.push_back(newEdge);
-    dest->incoming.push_back(newEdge);
+    adj.insert(newEdge);
+    dest->incoming.insert(newEdge);
     return newEdge;
 }
 

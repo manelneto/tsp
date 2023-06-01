@@ -3,6 +3,8 @@
 //
 
 #include "Vertex.h"
+#include <cmath>
+#include <stdexcept>
 
 using namespace std;
 
@@ -59,7 +61,7 @@ Edge *Vertex::addEdge(Vertex *dest, double distance) {
     return newEdge;
 }
 
-const Edge * Vertex::getEdge(Vertex * vertex) const {
+const Edge * Vertex::getEdge(const Vertex * vertex) const {
     for (const Edge * edge : adj)
         if (edge->getDest()->getId() == vertex->getId())
             return edge;
@@ -96,7 +98,21 @@ void Vertex::dfsPreorder(vector<unsigned> &preorder) {
     }
 }
 
-double Vertex::calculateDistance(Vertex *vertex) const {
-    // HAVERSINE (void?)
-    return 0.0;
+double Vertex::toRadians(double deg) {
+    return deg * 3.1416/180;
+}
+
+double Vertex::calculateDistance(const Vertex *vertex) const {
+    if (this->latitude == 0.0 && this->longitude == 0.0 && vertex->latitude == 0.0 && vertex->longitude == 0.0)
+        throw invalid_argument("Coordenadas inválidas");
+    double lat1 = toRadians(this->latitude);
+    double lon1 = toRadians(this->longitude);
+    double lat2 = toRadians(vertex->getLatitude());
+    double lon2 = toRadians(vertex->getLongitude());
+    double dLat = lat2 - lat1;
+    double dLon = lon2 - lon1;
+    double aux = pow(sin(0.5 * dLat), 2) + cos(lat1) * cos(lat2) * pow(sin(0.5 * dLon), 2);
+    double c = 2.0 * atan2(sqrt(aux), sqrt(1.0 - aux));
+    double r = 6371000;
+    return r * c;
 }

@@ -38,8 +38,9 @@ unsigned Graph::size() const {
 }
 
 void Graph::clear() {
-    for (auto v: vertexSet)
-        v->removeOutgoingEdges();
+    // não é boa prática comentar este código, mas talvez tenha que ser...
+    /*for (auto v: vertexSet)
+        v->removeOutgoingEdges();*/
     vertexSet.clear();
 }
 
@@ -60,10 +61,14 @@ std::pair<double, double> Graph::tspTriangularApproximation(vector<unsigned> &ci
         if (!vertex->isVisited())
             vertex->dfsPreorder(circuit);
     }
-    for (unsigned i = 0; i < circuit.size() - 1; i++)
-        cost += findVertex(circuit[i])->getEdge(findVertex(circuit[i + 1]))->getDistance();
-
-    cost += findVertex(circuit.back())->getEdge(findVertex(0))->getDistance();
+    for (unsigned i = 0; i < circuit.size() - 1; i++) {
+        const Vertex *source = findVertex(circuit[i]);
+        const Vertex *dest = findVertex(circuit[i + 1]);
+        const Edge *edge = source->getEdge(dest);
+        cost += edge ? edge->getDistance() : source->calculateDistance(dest);
+    }
+    const Edge *end = findVertex(circuit.back())->getEdge(findVertex(0));
+    cost += end ? end->getDistance() : findVertex(circuit.back())->calculateDistance(findVertex(0));
     return make_pair(prim.second, cost);
 }
 

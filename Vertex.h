@@ -113,7 +113,7 @@ public:
      * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
      * @return aresta com origem no vértice e destino em vertex
      */
-    const Edge * getEdge(Vertex * vertex) const;
+    const Edge * getEdge(const Vertex * vertex) const;
 
     /**@brief Remove todas as arestas de saída do vértice.
      *
@@ -128,12 +128,21 @@ public:
      */
     void dfsPreorder(std::vector<unsigned> &preorder);
 
+    /**@brief Converte um ângulo em graus para radianos.
+     *
+     * Complexidade Temporal: O(1)
+     * @param deg ângulo em graus a converter para radianos
+     * @return ângulo convertido para radianos
+     */
+    static double toRadians(double deg);
+
     /**@brief Calcula a distância entre o vértice e vertex através do método de Haversine.
      *
+     * Complexidade Temporal: O(1)
      * @param vertex vértice de destino para o cálculo da distância
      * @return distância entre o vértice e vertex
      */
-    double calculateDistance(Vertex * vertex) const;
+    double calculateDistance(const Vertex * vertex) const;
 
     friend class MutablePriorityQueue<Vertex>;
 

@@ -292,7 +292,13 @@ void Management::triangularApproximationHeuristic() {
     checkDataset();
     vector<unsigned> path;
     auto start = chrono::high_resolution_clock::now();
-    pair<double, double> circuit = graph.tspTriangularApproximation(path);
+    pair<double, double> circuit;
+    try {
+         circuit = graph.tspTriangularApproximation(path);
+    } catch (invalid_argument& e) {
+        cout << "\nA heurística de aproximação triangular não funciona para o grafo em questão. Provavelmente o grafo não verifica a desigualdade triangular." << endl;
+        return;
+    }
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
     for (unsigned p : path)

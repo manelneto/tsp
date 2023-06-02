@@ -99,7 +99,7 @@ public:
      */
     void setPath(Edge *path);
 
-    /**@brief Adiciona um aresta bidirecional entre o vértice e dest, com distância distance.
+    /**@brief Adiciona ao vértice um aresta com destino dest e distância distance.
      *
      * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
      * @param dest destino da aresta

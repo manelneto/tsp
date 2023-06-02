@@ -67,19 +67,19 @@ public:
      */
     double tspBacktracking(std::vector<unsigned> &circuit) const;
 
-    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
+    /**@brief Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
      *
      * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo
-     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
-     * @return par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada para a heurística e o segundo valor é o custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @param circuit circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP)
+     * @return par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada para a heurística e o segundo valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP)
      */
     std::pair<double, double> tspTriangularApproximation(std::vector<unsigned> &circuit) const;
 
-    /**@brief Resolve o Travelling Salesperson Problem (TSP) através da combinação de várias heurísticas: Nearest Neighbor para a construção do caminho e Simulated Annealing com 2-opt para a otimização.
+    /**@brief Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias heurísticas: Nearest Neighbor para a construção do caminho e Simulated Annealing com 2-opt para a otimização.
      *
      * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo
-     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
-     * @return par cujo primeiro valor é o custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP) antes da otimização e o segundo valor é o custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP) depois da otimização
+     * @param circuit circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP)
+     * @return par cujo primeiro valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) antes da otimização e o segundo valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) depois da otimização
      */
     std::pair<double, double> tspHeuristic(std::vector<unsigned> &circuit) const;
 
@@ -91,32 +91,45 @@ private:
      *
      * Complexidade Temporal: O(V!), sendo V o número de vértices
      * @param currentIndex índice atual do nó a analisar no circuito
-     * @param currentDist distância (peso) atual do circuito encontrado
+     * @param currentCost custo atual do circuito encontrado
      * @param currentPath circuito encontrado até ao momento
-     * @param minDist distância mínima (peso mínimo) do circuito encontrado até ao momento
+     * @param minCost custo mínimo do circuito encontrado até ao momento
      * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
-    void tspBacktracking(unsigned currentIndex, double currentDist, std::vector<unsigned> &currentPath, double &minDist, std::vector<unsigned> &circuit) const;
+    void tspBacktracking(unsigned currentIndex, double currentCost, std::vector<unsigned> &currentPath, double &minCost, std::vector<unsigned> &circuit) const;
 
     /**@brief Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim.
      *
      * Complexidade Temporal: O(E log(V)), sendo V o número de vértices do grafo e E o número de arestas do grafo
-     * @return par cujo primeiro valor é a Minimum Cost Spanning Tree (MST) determinada e o segundo valor é o custo da Minimum Cost Spanning Tree (MST) determinada
+     * @return par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada e o segundo valor é a Minimum Cost Spanning Tree (MST) determinada
      */
-    std::pair<Graph, double> mstPrim() const;
+    std::pair<double, Graph> mstPrim() const;
 
-    /**@brief Resolve o Travelling Salesperson Problem (TSP) através da heurística do Nearest Neighbor.
+    /**@brief Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Neighbor.
      *
      * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo
-     * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
-     * @return custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
+     * @param circuit circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP)
+     * @return custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP)
      */
     double tspNearestNeighbor(std::vector<unsigned> &circuit) const;
 
+    /**@brief Realiza uma operação de troca 2-opt entre duas arestas do circuito para resolver (de forma aproximada) o Travelling Salesperson Problem (TSP).
+     *
+     * Complexidade Temporal: O(n), sendo n o tamanho do circuito encontrado antes da otimização
+     * @param cost custo do circuito encontrado antes da operação de troca
+     * @param circuit circuito encontrado antes da operação de troca
+     * @return par cujo primeiro valor é o custo do circuito encontrado depois da operação de troca o segundo valor é o circuito encontrado depois da operação de troca
+     */
     std::pair<double, std::vector<unsigned>> tspTwoOptSwap(double cost, const std::vector<unsigned> &circuit) const;
 
+    /**@brief Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heurística Simulated Annealing.
+     *
+     * Complexidade Temporal: O(n<SUP>2</SUP>), sendo n o tamanho do circuito encontrado antes da otimização
+     * @param cost custo do circuito encontrado antes da otimização
+     * @param circuit circuito a otimizar
+     * @return custo do circuito depois da otimização
+     */
     double tspSimulatedAnnealing(double cost, std::vector<unsigned> &circuit) const;
-
 };
 
 

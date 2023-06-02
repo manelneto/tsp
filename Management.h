@@ -125,13 +125,13 @@ private:
      */
     void backtrackingAlgorithm();
 
-    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
+    /**@brief Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.
      *
      * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo a analisar
      */
     void triangularApproximationHeuristic();
 
-    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de uma combinação de heurísticas: Nearest Neighbor para a construção do circuito e Simulated Annealing com 2-opt para a otimização.
+    /**@brief Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heurísticas: Nearest Neighbor para a construção do circuito e Simulated Annealing com 2-opt para a otimização.
      *
      * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo a analisar
      */

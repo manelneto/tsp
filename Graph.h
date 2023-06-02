@@ -113,7 +113,7 @@ private:
      */
     double tspNearestNeighbor(std::vector<unsigned> &circuit) const;
 
-    double tspTwoOptSwap(double cost, std::vector<unsigned> &circuit) const;
+    std::pair<double, std::vector<unsigned>> tspTwoOptSwap(double cost, const std::vector<unsigned> &circuit) const;
 
     double tspSimulatedAnnealing(double cost, std::vector<unsigned> &circuit) const;
 

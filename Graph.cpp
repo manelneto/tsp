@@ -183,15 +183,15 @@ double Graph::tspNearestNeighbor(vector<unsigned> &circuit) const {
     return cost;
 }
 
-double Graph::tspTwoOptSwap(double cost, vector<unsigned> &circuit) const {
+std::pair<double, std::vector<unsigned>> Graph::tspTwoOptSwap(double cost, const vector<unsigned> &circuit) const {
     random_device device;
     mt19937 rng(device());
-    uniform_int_distribution<mt19937::result_type> distribution(0, circuit.size() - 2);
+    uniform_int_distribution<unsigned> distribution(0, circuit.size() - 2);
     unsigned first = distribution(rng);
     unsigned second = max(first, distribution(rng));
 
     if (second == first)
-        return cost;
+        return make_pair(cost, circuit);
 
     Edge *oldFirst = findVertex(circuit[first])->getEdge(findVertex(circuit[first + 1]));
     Edge *oldSecond = findVertex(circuit[second])->getEdge(findVertex(circuit[second + 1]));
@@ -201,16 +201,43 @@ double Graph::tspTwoOptSwap(double cost, vector<unsigned> &circuit) const {
 
     double delta = oldFirst->getDistance() + oldSecond->getDistance() - newFirst->getDistance() - newSecond->getDistance();
 
-    if (delta <= 0)
-        return cost;
+    //if (delta <= 0)
+    //
+    //    return make_pair(cost, circuit);
 
-    reverse(circuit.begin() + first + 1, circuit.begin() + second + 1);
+    vector<unsigned> tentative = circuit;
+    reverse(tentative.begin() + first + 1, tentative.begin() + second + 1);
 
-    return cost - delta;
+    return make_pair(cost - delta, tentative);
 }
 
 double Graph::tspSimulatedAnnealing(double cost, vector<unsigned> &circuit) const {
-    for (unsigned i = 0; i < 1000; i++)
-        cost = tspTwoOptSwap(cost, circuit);
-    return cost;
+    random_device device;
+    mt19937 rng(device());
+    uniform_real_distribution<double> distribution(0.0, 1.0);
+
+    double bestCost = cost;
+    vector<unsigned> bestCircuit = circuit;
+    for (double temperature = 100.0; temperature > 0.1; temperature *= 0.9)
+        for (unsigned i = 0; i < circuit.size(); i++) {
+            pair<double, vector<unsigned>> neighbor = tspTwoOptSwap(cost, circuit);
+            double delta = neighbor.first - cost;
+            if (delta <= 0) {
+                cost = neighbor.first;
+                circuit = neighbor.second;
+                if (cost < bestCost) {
+                    bestCost = cost;
+                    bestCircuit = circuit;
+                }
+            }
+            else {
+                double random = distribution(rng);
+                if (random < exp(-delta/temperature)) {
+                    cost = neighbor.first;
+                    circuit = neighbor.second;
+                }
+            }
+        }
+    circuit = bestCircuit;
+    return bestCost;
 }

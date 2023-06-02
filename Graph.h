@@ -31,7 +31,7 @@ public:
 
     /**@brief Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id dest, com distância distance.
      *
-     * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências de origem/destino
+     * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências do vértice de origem/destino
      * @param orig id do vértice de origem da aresta a adicionar
      * @param dest id do vértice de destino da aresta a adicionar
      * @param distance distância da aresta a adicionar
@@ -39,14 +39,14 @@ public:
      */
     bool addEdge(const unsigned &orig, const unsigned &dest, const double &distance);
 
-    /**@brief Retorna o tamanho (número de nós) do grafo
+    /**@brief Retorna o tamanho (número de nós) do grafo.
      *
      * Complexidade Temporal: O(1)
      * @return tamanho (número de nós) do grafo
      */
     unsigned size() const;
 
-    /**@brief Limpa o grafo, i. e., remove todos os seus vértices
+    /**@brief Limpa o grafo, i. e., remove todos os seus vértices.
      *
      * Complexidade Temporal: O(1)
      */

@@ -61,31 +61,11 @@ Edge *Vertex::addEdge(Vertex *dest, double distance) {
     return newEdge;
 }
 
-const Edge * Vertex::getEdge(const Vertex * vertex) const {
-    for (const Edge * edge : adj)
+Edge * Vertex::getEdge(const Vertex * vertex) const {
+    for (Edge * edge : adj)
         if (edge->getDest()->getId() == vertex->getId())
             return edge;
     return nullptr;
-}
-
-void Vertex::removeOutgoingEdges() {
-    auto it = adj.begin();
-    while (it != adj.end()) {
-        Edge *edge = *it;
-        it = adj.erase(it);
-        deleteEdge(edge);
-    }
-}
-
-void Vertex::deleteEdge(Edge *edge) const {
-    Vertex *dest = edge->getDest();
-    auto it = dest->incoming.begin();
-    while (it != dest->incoming.end())
-        if ((*it)->getOrig()->getId() == id)
-            it = dest->incoming.erase(it);
-        else
-            it++;
-    delete edge;
 }
 
 void Vertex::dfsPreorder(vector<unsigned> &preorder) {
@@ -115,4 +95,11 @@ double Vertex::calculateDistance(const Vertex *vertex) const {
     double c = 2.0 * atan2(sqrt(aux), sqrt(1.0 - aux));
     double r = 6371000;
     return r * c;
+}
+
+Edge *Vertex::getNearestNeighbor() const {
+    for (Edge * edge : adj)
+        if (!edge->getDest()->isVisited())
+            return edge;
+    return nullptr;
 }

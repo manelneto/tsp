@@ -113,13 +113,7 @@ public:
      * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
      * @return aresta com origem no vértice e destino em vertex
      */
-    const Edge * getEdge(const Vertex * vertex) const;
-
-    /**@brief Remove todas as arestas de saída do vértice.
-     *
-     * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
-     */
-    void removeOutgoingEdges();
+    Edge *getEdge(const Vertex * vertex) const;
 
     /**@brief Realiza uma Pesquisa em Profundidade (DFS) em pré-ordem a partir do vértice.
      *
@@ -144,6 +138,13 @@ public:
      */
     double calculateDistance(const Vertex * vertex) const;
 
+    /**@brief Retorna a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar.
+     *
+     * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
+     * @return a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar
+     */
+    Edge * getNearestNeighbor() const;
+
     friend class MutablePriorityQueue<Vertex>;
 
 private:
@@ -156,13 +157,6 @@ private:
     Edge *path = nullptr;
     std::multiset<Edge *, edgeCmp> incoming;
     int queueIndex;
-
-    /**@brief Apaga a aresta edge.
-     *
-     * Complexidade Temporal: O(n), sendo n o tamanho da lista de arestas de entrada no vértice de destino da aresta edge
-     * @param edge aresta a apagar
-     */
-    void deleteEdge(Edge *edge) const;
 };
 
 

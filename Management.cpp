@@ -212,6 +212,10 @@ void Management::readDataset() {
         readMediumSizeGraph();
     else if (option == 3)
         readRealWorldGraph();
+    if (graph.isComplete())
+        cout << "\nO grafo é completo." << endl;
+    else
+        cout << "\nO grafo NÃO é completo." << endl;
 }
 
 void Management::readToyGraph() {
@@ -235,7 +239,7 @@ void Management::readToyGraph() {
 
 void Management::readMediumSizeGraph() {
     string path = "Extra_Fully_Connected_Graphs/edges_";
-    cout << "\nNúmero de Arestas (25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900): ";
+    cout << "\nNúmero de Nós (25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900): ";
     int option = readInt();
     unordered_set<int> valid = {25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900};
     option = validateInt(option, valid);
@@ -280,7 +284,7 @@ void Management::backtrackingAlgorithm() {
     auto start = chrono::high_resolution_clock::now();
     double cost = graph.tspBacktracking(path);
     auto end = chrono::high_resolution_clock::now();
-    cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
+    cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
     for (unsigned p : path)
         cout << p << " -> ";
     cout << "0" << endl;
@@ -296,11 +300,11 @@ void Management::triangularApproximationHeuristic() {
     try {
          circuit = graph.tspTriangularApproximation(path);
     } catch (invalid_argument& e) {
-        cout << "\nA heurística de aproximação triangular não funciona para o grafo em questão. Provavelmente o grafo não verifica a desigualdade triangular." << endl;
+        cout << "\nA heurística de aproximação triangular não funciona para o grafo em análise. Provavelmente o grafo não verifica a desigualdade triangular." << endl;
         return;
     }
     auto end = chrono::high_resolution_clock::now();
-    cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com peso mínimo agregado é " << endl;
+    cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
     for (unsigned p : path)
         cout << p << " -> ";
     cout << "0" << endl;
@@ -313,5 +317,19 @@ void Management::triangularApproximationHeuristic() {
 
 void Management::ourHeuristic() {
     checkDataset();
-    // TODO
+    if (!graph.isComplete()) {
+        cout << "\nA nossa heurística não funciona para o grafo em análise. O grafo não é completo." << endl;
+        return;
+    }
+    vector<unsigned> path;
+    auto start = chrono::high_resolution_clock::now();
+    pair<double, double> circuit = graph.tspHeuristic(path);
+    auto end = chrono::high_resolution_clock::now();
+    cout << "\nDe acordo com a nossa heurística (Nearest Neighbor e Simulated Annealing com 2-opt), o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
+    for (unsigned p : path)
+        cout << p << " -> ";
+    cout << "0" << endl;
+    cout << "\nO custo do circuito antes da otimização com Simulated Annealing (2-opt) é " << circuit.first << "." << endl;
+    cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second << ". Este custo é " << 100.0 * circuit.second/circuit.first << "% do anterior." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }

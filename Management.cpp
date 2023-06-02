@@ -110,7 +110,7 @@ bool Management::readNodesFile() {
             errors++;
     }
     cout << "Leitura do ficheiro " << nodesFile << " bem-sucedida!" << endl;
-    cout << "Foram lidos " << graph.size() << " nós e ocorreram " << errors << " erros. ";
+    cout << "Foram lidos " << graph.size() << " nós e ocorreram " << errors << " erros.";
     return true;
 }
 
@@ -178,7 +178,7 @@ bool Management::readGraphFile(bool header) {
         distances.push_back(distance);
     }
     if (edges.size() != distances.size())
-        throw logic_error("Algo correu mal...");
+        throw logic_error("O número de arestas não corresponde com o número de distâncias");
     for (unsigned i = 0; i <= last; i++)
         graph.addVertex(i);
     auto edge = edges.begin();
@@ -210,7 +210,7 @@ void Management::readDataset() {
         readToyGraph();
     else if (option == 2)
         readMediumSizeGraph();
-    else if (option == 3)
+    else
         readRealWorldGraph();
     if (graph.isComplete())
         cout << "\nO grafo é completo." << endl;
@@ -298,8 +298,8 @@ void Management::triangularApproximationHeuristic() {
     pair<double, double> circuit;
     try {
          circuit = graph.tspTriangularApproximation(path);
-    } catch (invalid_argument& e) {
-        cout << "\nA heurística de aproximação triangular não funciona para o grafo em análise. Provavelmente o grafo não verifica a desigualdade triangular." << endl;
+    } catch (invalid_argument &) {
+        cout << "\nA heurística de aproximação triangular não funciona para o grafo em análise. O grafo não verifica a desigualdade triangular." << endl;
         return;
     }
     auto end = chrono::high_resolution_clock::now();

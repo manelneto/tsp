@@ -41,7 +41,7 @@ private:
      */
     static std::string readInput();
 
-    /**@brief Lê o input do utilizador, forçando a que seja um número inteiro não negativo.
+    /**@brief Lê o input do utilizador, forçando que seja um número inteiro não negativo.
      *
      * Complexidade Temporal: O(n), sendo n a posição do primeiro input válido introduzido pelo utilizador
      * @return número inteiro não negativo introduzido pelo utilizador
@@ -81,7 +81,7 @@ private:
      */
     bool readEdgesFile();
 
-    /**@brief Lê o ficheiro do grafo e cria-o.
+    /**@brief Lê o ficheiro do grafo e cria o grafo.
      *
      * Complexidade Temporal: O(n), sendo n o número de linhas do ficheiro do grafo
      * @param header true se a primeira linha do ficheiro do grafo é um cabeçalho, false caso contrário
@@ -131,6 +131,10 @@ private:
      */
     void triangularApproximationHeuristic();
 
+    /**@brief Resolve o Travelling Salesperson Problem (TSP) através de uma combinação de heurísticas: Nearest Neighbor para a construção do circuito e Simulated Annealing com 2-opt para a otimização.
+     *
+     * Complexidade Temporal: O(V<SUP>2</SUP>), sendo V o número de vértices do grafo a analisar
+     */
     void ourHeuristic();
 };
 

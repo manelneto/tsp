@@ -74,7 +74,7 @@ public:
     /**@brief Retorna a aresta predecessora do vértice no caminho atual.
      *
      * Complexidade Temporal: O(1)
-     * @return a aresta predecessora do vértice no caminho atual
+     * @return aresta predecessora do vértice no caminho atual
      */
     Edge *getPath() const;
 
@@ -99,21 +99,28 @@ public:
      */
     void setPath(Edge *path);
 
-    /**@brief Adiciona um aresta desde o vértice até dest, com distância distance.
+    /**@brief Adiciona um aresta bidirecional entre o vértice e dest, com distância distance.
      *
-     * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências do vértice
+     * Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
      * @param dest destino da aresta
      * @param distance distância da aresta
      * @return aresta adicionada ao vértice
      */
     Edge *addEdge(Vertex *dest, double distance);
 
-    /**@brief Retorna a aresta com origem no vértice e destino em vertex (se existir).
+    /**@brief Retorna (se existir) a aresta com origem no vértice e destino em vertex.
      *
      * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
      * @return aresta com origem no vértice e destino em vertex
      */
     Edge *getEdge(const Vertex * vertex) const;
+
+    /**@brief Retorna (se existir) a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar.
+     *
+     * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
+     * @return aresta com destino no vértice vizinho (adjacente) mais próximo por visitar
+     */
+    Edge * getNearestNeighbor() const;
 
     /**@brief Realiza uma Pesquisa em Profundidade (DFS) em pré-ordem a partir do vértice.
      *
@@ -122,14 +129,6 @@ public:
      */
     void dfsPreorder(std::vector<unsigned> &preorder);
 
-    /**@brief Converte um ângulo em graus para radianos.
-     *
-     * Complexidade Temporal: O(1)
-     * @param deg ângulo em graus a converter para radianos
-     * @return ângulo convertido para radianos
-     */
-    static double toRadians(double deg);
-
     /**@brief Calcula a distância entre o vértice e vertex através do método de Haversine.
      *
      * Complexidade Temporal: O(1)
@@ -137,13 +136,6 @@ public:
      * @return distância entre o vértice e vertex
      */
     double calculateDistance(const Vertex * vertex) const;
-
-    /**@brief Retorna a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar.
-     *
-     * Complexidade Temporal: O(n), sendo n o tamanho da lista de adjacências (arestas a sair) do vértice
-     * @return a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar
-     */
-    Edge * getNearestNeighbor() const;
 
     friend class MutablePriorityQueue<Vertex>;
 
@@ -157,6 +149,14 @@ private:
     Edge *path = nullptr;
     std::multiset<Edge *, edgeCmp> incoming;
     int queueIndex;
+
+    /**@brief Converte um ângulo em graus para radianos.
+     *
+     * Complexidade Temporal: O(1)
+     * @param deg ângulo em graus a converter para radianos
+     * @return ângulo convertido para radianos
+     */
+    static double toRadians(double deg);
 };
 
 

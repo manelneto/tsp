@@ -68,6 +68,13 @@ Edge * Vertex::getEdge(const Vertex * vertex) const {
     return nullptr;
 }
 
+Edge *Vertex::getNearestNeighbor() const {
+    for (Edge * edge : adj)
+        if (!edge->getDest()->isVisited())
+            return edge;
+    return nullptr;
+}
+
 void Vertex::dfsPreorder(vector<unsigned> &preorder) {
     this->visited = true;
     preorder.push_back(this->id);
@@ -76,10 +83,6 @@ void Vertex::dfsPreorder(vector<unsigned> &preorder) {
         if (!v->isVisited())
             v->dfsPreorder(preorder);
     }
-}
-
-double Vertex::toRadians(double deg) {
-    return deg * 3.1416/180;
 }
 
 double Vertex::calculateDistance(const Vertex *vertex) const {
@@ -97,9 +100,6 @@ double Vertex::calculateDistance(const Vertex *vertex) const {
     return r * c;
 }
 
-Edge *Vertex::getNearestNeighbor() const {
-    for (Edge * edge : adj)
-        if (!edge->getDest()->isVisited())
-            return edge;
-    return nullptr;
+double Vertex::toRadians(double deg) {
+    return deg * 3.1416/180;
 }

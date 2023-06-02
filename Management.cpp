@@ -327,6 +327,6 @@ void Management::ourHeuristic() {
     for (unsigned p : path)
         cout << " -> " << p;
     cout << "\nO custo do circuito antes da otimização com Simulated Annealing (2-opt) é " << circuit.first << "." << endl;
-    cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second << ". Este custo é " << 100.0 * circuit.second/circuit.first << "% do anterior." << endl;
+    cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second << ". Este custo é " << 100.0 * (circuit.first - circuit.second)/circuit.first << "% melhor do que o anterior." << endl;
     cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }

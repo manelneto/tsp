@@ -286,8 +286,7 @@ void Management::backtrackingAlgorithm() {
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
     for (unsigned p : path)
-        cout << p << " -> ";
-    cout << "0" << endl;
+        cout << " -> " << p;
     cout << "\nO custo do circuito é " << cost << "." << endl;
     cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
 }
@@ -306,8 +305,7 @@ void Management::triangularApproximationHeuristic() {
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
     for (unsigned p : path)
-        cout << p << " -> ";
-    cout << "0" << endl;
+        cout << " -> " << p;
     double mst = circuit.first;
     double cost = circuit.second;
     cout << "\nO custo da Minimum Cost Spanning Tree (MST) determinada para a heurística é " << mst << ". Este custo é um limite inferior para o custo do circuito." << endl;
@@ -327,8 +325,7 @@ void Management::ourHeuristic() {
     auto end = chrono::high_resolution_clock::now();
     cout << "\nDe acordo com a nossa heurística (Nearest Neighbor e Simulated Annealing com 2-opt), o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
     for (unsigned p : path)
-        cout << p << " -> ";
-    cout << "0" << endl;
+        cout << " -> " << p;
     cout << "\nO custo do circuito antes da otimização com Simulated Annealing (2-opt) é " << circuit.first << "." << endl;
     cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second << ". Este custo é " << 100.0 * circuit.second/circuit.first << "% do anterior." << endl;
     cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;

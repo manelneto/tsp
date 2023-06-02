@@ -7,6 +7,7 @@
 
 #include <limits>
 #include <climits>
+#include <random>
 
 using namespace std;
 
@@ -65,22 +66,20 @@ pair<double, double> Graph::tspTriangularApproximation(vector<unsigned> &circuit
         if (!vertex->isVisited())
             vertex->dfsPreorder(circuit);
     }
+    circuit.push_back(0);
     for (unsigned i = 0; i < circuit.size() - 1; i++) {
         const Vertex *source = findVertex(circuit[i]);
         const Vertex *dest = findVertex(circuit[i + 1]);
         const Edge *edge = source->getEdge(dest);
         cost += edge ? edge->getDistance() : source->calculateDistance(dest);
     }
-    const Edge *end = findVertex(circuit.back())->getEdge(findVertex(0));
-    cost += end ? end->getDistance() : findVertex(circuit.back())->calculateDistance(findVertex(0));
     return make_pair(prim.second, cost);
 }
 
 pair<double, double> Graph::tspHeuristic(vector<unsigned> &circuit) const {
-    double cost = tspNearestNeighbor(circuit);
-    const Edge *end = findVertex(circuit.back())->getEdge(findVertex(0));
-    cost += end->getDistance();
-    return make_pair(cost, 0.0);
+    double before = tspNearestNeighbor(circuit);
+    double after = tspSimulatedAnnealing(before, circuit);
+    return make_pair(before, after);
 }
 
 void Graph::tspBacktracking(unsigned currentIndex, double currentDist, vector<unsigned> &currentPath, double &minDist, vector<unsigned> &circuit) const {
@@ -91,6 +90,7 @@ void Graph::tspBacktracking(unsigned currentIndex, double currentDist, vector<un
         if (currentDist < minDist) {
             minDist = currentDist;
             circuit = currentPath;
+            circuit.push_back(0);
         }
     }
     for (unsigned i = 1; i < size; i++) {
@@ -177,6 +177,69 @@ double Graph::tspNearestNeighbor(vector<unsigned> &circuit) const {
         circuit.push_back(vertex->getId());
         cost += edge->getDistance();
     }
+    cost += findVertex(circuit.back())->getEdge(findVertex(0))->getDistance();
+    circuit.push_back(0);
+    return cost;
+}
+#include <iostream>
+double Graph::tspTwoOptSwap(double cost, vector<unsigned> &circuit) const {
+    double temp = cost;
+    cout << "size: " << circuit.size() << endl;
+    for (auto i : circuit)
+        cout << i << " - ";
+    cout << endl << "cost: " << cost << endl;
+    // escolher aleatoriamente as duas arestas a remover
+    random_device device;
+    mt19937 rng(device());
+    uniform_int_distribution<mt19937::result_type> distribution(0, circuit.size() - 2);
+    unsigned first = distribution(rng);
+    unsigned second = distribution(rng);
 
+    if (first >= second)
+        return cost;
+
+    cout << "first: " << first << " | second: " << second << endl;
+    Edge *oldFirst = findVertex(circuit[first])->getEdge(findVertex(circuit[first + 1]));
+    Edge *oldSecond = findVertex(circuit[second])->getEdge(findVertex(circuit[second + 1]));
+    cout << "oldFirst: (" << oldFirst->getOrig()->getId() << ", " << oldFirst->getDest()->getId() << ")" << " = " << oldFirst->getDistance() << endl;
+    cout << "oldSecond: (" << oldSecond->getOrig()->getId() << ", " << oldSecond->getDest()->getId() << ") = " << oldSecond->getDistance() << endl;
+
+    // remover as duas arestas escolhidas
+    cost = cost - oldFirst->getDistance() - oldSecond->getDistance();
+    cout << "cost -:" << cost << endl;
+
+    // determinar as duas arestas a adicionar
+    Edge *newFirst = findVertex(circuit[first])->getEdge(findVertex(circuit[second]));
+    Edge *newSecond = findVertex(circuit[first + 1])->getEdge(findVertex(circuit[second + 1]));
+    cout << "newFirst: (" << newFirst->getOrig()->getId() << ", " << newFirst->getDest()->getId() << ") = " << newFirst->getDistance() << endl;
+    cout << "newSecond: (" << newSecond->getOrig()->getId() << ", " << newSecond->getDest()->getId() << ") = " << newSecond->getDistance() <<  endl;
+
+    // adicionar as duas arestas determinadas
+    cost = cost + newFirst->getDistance() + newSecond->getDistance();
+    cout << "cost +:" << cost << endl;
+    if (cost >= temp)
+        return cost;
+    // atualizar o circuito;
+    circuit[first + 1] = newFirst->getDest()->getId();
+    circuit[second] = newSecond->getOrig()->getId();
+
+    for (auto i : circuit)
+        cout << i << " - ";
+    cout << endl << "cost: " << cost << endl;
+    cout << " ---------------------" << endl;
+
+    return cost;
+}
+
+double Graph::tspSimulatedAnnealing(double cost, vector<unsigned> &circuit) const {
+    unsigned max = 1000;
+    for (unsigned i = 0; i < 200; i++) {
+        // T = temperatue(1-(k+1)/max)
+        double newCost = tspTwoOptSwap(cost, circuit);
+        if (newCost < cost)
+            cost = newCost;
+        // pick a random neighbour - snew = neighbour(s)
+        // if (P(E(s)), E(snew), T) >= random (0,1) s = snew;
+    }
     return cost;
 }

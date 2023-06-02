@@ -112,6 +112,11 @@ private:
      * @return custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
     double tspNearestNeighbor(std::vector<unsigned> &circuit) const;
+
+    double tspTwoOptSwap(double cost, std::vector<unsigned> &circuit) const;
+
+    double tspSimulatedAnnealing(double cost, std::vector<unsigned> &circuit) const;
+
 };
 
 

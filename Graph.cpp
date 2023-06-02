@@ -23,8 +23,8 @@ bool Graph::addVertex(const unsigned &id, const double &longitude, const double 
 }
 
 bool Graph::addEdge(const unsigned &orig, const unsigned &dest, const double &distance) {
-    Vertex * v1 = findVertex(orig);
-    Vertex * v2 = findVertex(dest);
+    Vertex *v1 = findVertex(orig);
+    Vertex *v2 = findVertex(dest);
     if (!v1 || !v2)
         return false;
     v1->addEdge(v2, distance);
@@ -44,7 +44,7 @@ void Graph::clear() {
 
 bool Graph::isComplete() const {
     unsigned n = this->size();
-    return edges == (n * (n - 1))/2;
+    return edges == (n * (n - 1)) / 2;
 }
 
 double Graph::tspBacktracking(vector<unsigned> &circuit) const {
@@ -60,7 +60,7 @@ pair<double, double> Graph::tspTriangularApproximation(vector<unsigned> &circuit
     double cost = 0.0;
     Graph mst = prim.second;
     for (unsigned i = 0; i < mst.size(); i++) {
-        Vertex * vertex = mst.findVertex(i);
+        Vertex *vertex = mst.findVertex(i);
         if (!vertex->isVisited())
             vertex->dfsPreorder(circuit);
     }
@@ -80,9 +80,10 @@ pair<double, double> Graph::tspHeuristic(vector<unsigned> &circuit) const {
     return make_pair(before, after);
 }
 
-void Graph::tspBacktracking(unsigned currentIndex, double currentCost, vector<unsigned> &currentPath, double &minCost, vector<unsigned> &circuit) const {
+void Graph::tspBacktracking(unsigned currentIndex, double currentCost, vector<unsigned> &currentPath, double &minCost,
+                            vector<unsigned> &circuit) const {
     unsigned size = this->size();
-    const Edge * edge;
+    const Edge *edge;
     if (currentIndex == size && (edge = findVertex(currentPath[size - 1])->getEdge(findVertex(currentPath[0])))) {
         currentCost += edge->getDistance();
         if (currentCost < minCost) {
@@ -112,7 +113,7 @@ pair<double, Graph> Graph::mstPrim() const {
     double cost = 0.0;
     Graph mst;
 
-    for (const auto v : vertexSet) {
+    for (const auto v: vertexSet) {
         v->setVisited(false);
         v->setDistance((double) INT_MAX);
         v->setPath(nullptr);
@@ -120,14 +121,14 @@ pair<double, Graph> Graph::mstPrim() const {
     }
 
     MutablePriorityQueue<Vertex> q;
-    Vertex* root = findVertex(0);
+    Vertex *root = findVertex(0);
     root->setDistance(0.0);
     q.insert(root);
     while (!q.empty()) {
         auto v = q.extractMin();
         v->setVisited(true);
-        for (const auto &edge : v->getAdj()) {
-            Vertex* u = edge->getDest();
+        for (const auto &edge: v->getAdj()) {
+            Vertex *u = edge->getDest();
             if (!u->isVisited()) {
                 double distance = u->getDistance();
                 if (edge->getDistance() < distance) {
@@ -142,7 +143,7 @@ pair<double, Graph> Graph::mstPrim() const {
         }
     }
 
-    for (const auto v : vertexSet) {
+    for (const auto v: vertexSet) {
         v->setVisited(false);
         Edge *edge = v->getPath();
         if (edge) {
@@ -157,7 +158,7 @@ pair<double, Graph> Graph::mstPrim() const {
 double Graph::tspNearestNeighbor(vector<unsigned> &circuit) const {
     double cost = 0.0;
 
-    for (const auto v : vertexSet) {
+    for (const auto v: vertexSet) {
         v->setVisited(false);
         v->setDistance((double) INT_MAX);
         v->setPath(nullptr);
@@ -167,7 +168,7 @@ double Graph::tspNearestNeighbor(vector<unsigned> &circuit) const {
     vertex->setVisited(true);
     circuit.push_back(vertex->getId());
     for (unsigned i = 0; i < size() - 1; i++) {
-        Edge* edge = vertex->getNearestNeighbor();
+        Edge *edge = vertex->getNearestNeighbor();
         vertex = edge->getDest();
         vertex->setVisited(true);
         vertex->setDistance(edge->getDistance());
@@ -202,7 +203,8 @@ std::pair<double, std::vector<unsigned>> Graph::tspTwoOptSwap(double cost, const
     Edge *newFirst = findVertex(circuit[first])->getEdge(findVertex(circuit[second]));
     Edge *newSecond = findVertex(circuit[first + 1])->getEdge(findVertex(circuit[second + 1]));
 
-    double delta = oldFirst->getDistance() + oldSecond->getDistance() - newFirst->getDistance() - newSecond->getDistance();
+    double delta =
+            oldFirst->getDistance() + oldSecond->getDistance() - newFirst->getDistance() - newSecond->getDistance();
 
     vector<unsigned> tentative = circuit;
     reverse(tentative.begin() + first + 1, tentative.begin() + second + 1);
@@ -228,10 +230,9 @@ double Graph::tspSimulatedAnnealing(double cost, vector<unsigned> &circuit) cons
                     bestCost = cost;
                     bestCircuit = circuit;
                 }
-            }
-            else {
+            } else {
                 double random = distribution(rng);
-                if (random < exp(-delta/temperature)) {
+                if (random < exp(-delta / temperature)) {
                     cost = neighbor.first;
                     circuit = neighbor.second;
                 }

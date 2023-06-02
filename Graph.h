@@ -96,7 +96,8 @@ private:
      * @param minCost custo mínimo do circuito encontrado até ao momento
      * @param circuit circuito encontrado como solução para o Travelling Salesperson Problem (TSP)
      */
-    void tspBacktracking(unsigned currentIndex, double currentCost, std::vector<unsigned> &currentPath, double &minCost, std::vector<unsigned> &circuit) const;
+    void tspBacktracking(unsigned currentIndex, double currentCost, std::vector<unsigned> &currentPath, double &minCost,
+                         std::vector<unsigned> &circuit) const;
 
     /**@brief Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim.
      *

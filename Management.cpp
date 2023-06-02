@@ -13,7 +13,7 @@
 using namespace std;
 
 bool Management::isInt(const string &str) {
-    for (const char &ch : str)
+    for (const char &ch: str)
         if (!isdigit(ch))
             return false;
     return true;
@@ -54,7 +54,7 @@ int Management::validateInt(int n, int min, int max) {
 int Management::validateInt(int n, const unordered_set<int> &valid) {
     while (valid.find(n) == valid.end()) {
         cout << "O número inserido não é valido (deve pertencer ao conjunto {";
-        for (const int &v : valid)
+        for (const int &v: valid)
             cout << v << ", ";
         cout << "}). Tente novamente: ";
         n = readInt();
@@ -189,7 +189,8 @@ bool Management::readGraphFile(bool header) {
         else
             errors++;
     cout << "Leitura do ficheiro " << graphFile << " bem-sucedida!" << endl;
-    cout << "Foram lidos " << graph.size() << " nós e " << counter << " arestas e ocorreram " << errors << " erros." << endl;
+    cout << "Foram lidos " << graph.size() << " nós e " << counter << " arestas e ocorreram " << errors << " erros."
+         << endl;
     return true;
 }
 
@@ -272,7 +273,9 @@ void Management::readRealWorldGraph() {
 
 void Management::checkDataset() {
     while (!filesRead) {
-        cout << "Ainda não leu os ficheiros de dados (ou ocorreu um erro durante a leitura), pelo que não existem dados para analisar." << endl;
+        cout
+                << "Ainda não leu os ficheiros de dados (ou ocorreu um erro durante a leitura), pelo que não existem dados para analisar."
+                << endl;
         cout << endl;
         readDataset();
     }
@@ -284,11 +287,14 @@ void Management::backtrackingAlgorithm() {
     auto start = chrono::high_resolution_clock::now();
     double cost = graph.tspBacktracking(path);
     auto end = chrono::high_resolution_clock::now();
-    cout << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
-    for (unsigned p : path)
+    cout
+            << "\nDe acordo com o algoritmo de backtracking, o circuito que visita todos os nós do grafo com custo mínimo agregado é "
+            << endl;
+    for (unsigned p: path)
         cout << " -> " << p;
     cout << "\nO custo do circuito é " << cost << "." << endl;
-    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start) / chrono::milliseconds(1) << " milissegundos a executar."
+         << endl;
 }
 
 void Management::triangularApproximationHeuristic() {
@@ -297,20 +303,26 @@ void Management::triangularApproximationHeuristic() {
     auto start = chrono::high_resolution_clock::now();
     pair<double, double> circuit;
     try {
-         circuit = graph.tspTriangularApproximation(path);
+        circuit = graph.tspTriangularApproximation(path);
     } catch (invalid_argument &) {
-        cout << "\nA heurística de aproximação triangular não funciona para o grafo em análise. O grafo não verifica a desigualdade triangular." << endl;
+        cout
+                << "\nA heurística de aproximação triangular não funciona para o grafo em análise. O grafo não verifica a desigualdade triangular."
+                << endl;
         return;
     }
     auto end = chrono::high_resolution_clock::now();
-    cout << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
-    for (unsigned p : path)
+    cout
+            << "\nDe acordo com a heurística de aproximação triangular, o circuito que visita todos os nós do grafo com custo mínimo agregado é "
+            << endl;
+    for (unsigned p: path)
         cout << " -> " << p;
     double mst = circuit.first;
     double cost = circuit.second;
-    cout << "\nO custo da Minimum Cost Spanning Tree (MST) determinada para a heurística é " << mst << ". Este custo é um limite inferior para o custo do circuito." << endl;
+    cout << "\nO custo da Minimum Cost Spanning Tree (MST) determinada para a heurística é " << mst
+         << ". Este custo é um limite inferior para o custo do circuito." << endl;
     cout << "O custo do circuito é " << cost << "." << endl;
-    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start) / chrono::milliseconds(1) << " milissegundos a executar."
+         << endl;
 }
 
 void Management::ourHeuristic() {
@@ -323,10 +335,16 @@ void Management::ourHeuristic() {
     auto start = chrono::high_resolution_clock::now();
     pair<double, double> circuit = graph.tspHeuristic(path);
     auto end = chrono::high_resolution_clock::now();
-    cout << "\nDe acordo com a nossa heurística (Nearest Neighbor e Simulated Annealing com 2-opt), o circuito que visita todos os nós do grafo com custo mínimo agregado é " << endl;
-    for (unsigned p : path)
+    cout
+            << "\nDe acordo com a nossa heurística (Nearest Neighbor e Simulated Annealing com 2-opt), o circuito que visita todos os nós do grafo com custo mínimo agregado é "
+            << endl;
+    for (unsigned p: path)
         cout << " -> " << p;
-    cout << "\nO custo do circuito antes da otimização com Simulated Annealing (2-opt) é " << circuit.first << "." << endl;
-    cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second << ". Este custo é " << 100.0 * (circuit.first - circuit.second)/circuit.first << "% melhor do que o anterior." << endl;
-    cout << "\nO algoritmo demorou cerca de " << (end - start)/chrono::milliseconds(1) << " milissegundos a executar."<< endl;
+    cout << "\nO custo do circuito antes da otimização com Simulated Annealing (2-opt) é " << circuit.first << "."
+         << endl;
+    cout << "O custo do circuito depois da otimização com Simulated Annealing (2-opt) é " << circuit.second
+         << ". Este custo é " << 100.0 * (circuit.first - circuit.second) / circuit.first
+         << "% melhor do que o anterior." << endl;
+    cout << "\nO algoritmo demorou cerca de " << (end - start) / chrono::milliseconds(1) << " milissegundos a executar."
+         << endl;
 }

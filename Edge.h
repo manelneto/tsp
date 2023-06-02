@@ -62,7 +62,7 @@ struct edgeCmp {
      * @param edge2 aresta 2
      * @return true se a distância da aresta 1 é menor do que a distância da aresta 2, false caso contrário
      */
-    bool operator()(const Edge* edge1, const Edge* edge2) const {
+    bool operator()(const Edge *edge1, const Edge *edge2) const {
         return *edge1 < *edge2;
     }
 };

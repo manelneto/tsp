@@ -55,21 +55,21 @@ void Vertex::setPath(Edge *path) {
 }
 
 Edge *Vertex::addEdge(Vertex *dest, double distance) {
-    Edge * newEdge = new Edge(this, dest, distance);
+    Edge *newEdge = new Edge(this, dest, distance);
     adj.insert(newEdge);
     dest->incoming.insert(newEdge);
     return newEdge;
 }
 
-Edge * Vertex::getEdge(const Vertex * vertex) const {
-    for (Edge * edge : adj)
+Edge *Vertex::getEdge(const Vertex *vertex) const {
+    for (Edge *edge: adj)
         if (edge->getDest()->getId() == vertex->getId())
             return edge;
     return nullptr;
 }
 
 Edge *Vertex::getNearestNeighbor() const {
-    for (Edge * edge : adj)
+    for (Edge *edge: adj)
         if (!edge->getDest()->isVisited())
             return edge;
     return nullptr;
@@ -78,7 +78,7 @@ Edge *Vertex::getNearestNeighbor() const {
 void Vertex::dfsPreorder(vector<unsigned> &preorder) {
     this->visited = true;
     preorder.push_back(this->id);
-    for (auto edge : this->adj) {
+    for (auto edge: this->adj) {
         auto v = edge->getDest();
         if (!v->isVisited())
             v->dfsPreorder(preorder);
@@ -101,5 +101,5 @@ double Vertex::calculateDistance(const Vertex *vertex) const {
 }
 
 double Vertex::toRadians(double deg) {
-    return deg * 3.1416/180;
+    return deg * 3.1416 / 180;
 }

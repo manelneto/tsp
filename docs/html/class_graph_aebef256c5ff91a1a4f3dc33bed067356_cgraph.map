@@ -1,0 +1,6 @@
+<map id="Graph::addEdge" name="Graph::addEdge">
+<area shape="rect" id="node1" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="5,31,121,56"/>
+<area shape="rect" id="node2" href="$class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="171,5,290,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="169,55,292,80"/>
+<area shape="rect" id="node4" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="340,55,429,80"/>
+</map>

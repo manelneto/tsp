@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Routing Algorithm for Ocean Shipping and Urban Deliveries: Código-Fonte de Management.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Routing Algorithm for Ocean Shipping and Urban Deliveries<span id="projectnumber">&#160;DA</span>
+   </div>
+   <div id="projectbrief">Programming Project II</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Management.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_management_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by manue on 08/05/2023.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TSP_MANAGEMENT_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TSP_MANAGEMENT_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_graph_8h.html">Graph.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_management.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_management.html">Management</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2">menu</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_management.html#af7070dac89fca8ea7276a7c0bfc96422">   23</a></span>    std::string <a class="code hl_variable" href="class_management.html#af7070dac89fca8ea7276a7c0bfc96422">nodesFile</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_management.html#a9c54b60671d4bc8d5c5f2b5d38f2b6b4">   24</a></span>    std::string <a class="code hl_variable" href="class_management.html#a9c54b60671d4bc8d5c5f2b5d38f2b6b4">edgesFile</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_management.html#a7d825646d90b67c56d5f6ab30661c505">   25</a></span>    std::string <a class="code hl_variable" href="class_management.html#a7d825646d90b67c56d5f6ab30661c505">graphFile</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_management.html#ae734fc2de51ca2f0ce27bb31e4bd22df">   26</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_management.html#ae734fc2de51ca2f0ce27bb31e4bd22df">filesRead</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_management.html#af09213090584929923fcc1a7969a4f1d">   27</a></span>    <a class="code hl_class" href="class_graph.html">Graph</a> <a class="code hl_variable" href="class_management.html#af09213090584929923fcc1a7969a4f1d">graph</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_management.html#a143b35ace96178bcc045ce52d5b75c54">isInt</a>(<span class="keyword">const</span> std::string &amp;str);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6">readInput</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_management.html#afd130eb8a34de069a8cde49a32fbf134">readInt</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_management.html#a52b43f9d60bf05268b016461f8c15504">validateInt</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_management.html#aa03d973402ca8328c3dc063b66596355">   68</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_management.html#aa03d973402ca8328c3dc063b66596355">validateInt</a>(<span class="keywordtype">int</span> n, <span class="keyword">const</span> std::unordered_set&lt;int&gt; &amp;valid);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c">readNodesFile</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_management.html#a9a0072306ebd07880ae36e96b2f64d45">readEdgesFile</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187">readGraphFile</a>(<span class="keywordtype">bool</span> header);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#ad943e13af733386a577e928fc3bb231c">readDataset</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46">readToyGraph</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e">readMediumSizeGraph</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c">readRealWorldGraph</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5">checkDataset</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0">backtrackingAlgorithm</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae">triangularApproximationHeuristic</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17">ourHeuristic</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif </span><span class="comment">//TSP_MANAGEMENT_H</span></div>
+<div class="ttc" id="a_graph_8h_html"><div class="ttname"><a href="_graph_8h.html">Graph.h</a></div></div>
+<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdef"><b>Definition:</b> Graph.h:12</div></div>
+<div class="ttc" id="aclass_management_html"><div class="ttname"><a href="class_management.html">Management</a></div><div class="ttdef"><b>Definition:</b> Management.h:13</div></div>
+<div class="ttc" id="aclass_management_html_a11596d7b75a3ec4ec5630d143e6b6a5c"><div class="ttname"><a href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c">Management::readRealWorldGraph</a></div><div class="ttdeci">void readRealWorldGraph()</div><div class="ttdoc">Lê um Real-World Graph.</div><div class="ttdef"><b>Definition:</b> Management.cpp:259</div></div>
+<div class="ttc" id="aclass_management_html_a143b35ace96178bcc045ce52d5b75c54"><div class="ttname"><a href="class_management.html#a143b35ace96178bcc045ce52d5b75c54">Management::isInt</a></div><div class="ttdeci">static bool isInt(const std::string &amp;str)</div><div class="ttdoc">Verifica se str é um número inteiro não negativo.</div><div class="ttdef"><b>Definition:</b> Management.cpp:15</div></div>
+<div class="ttc" id="aclass_management_html_a19ba50b8c65e3f48ae56d01a1897ce46"><div class="ttname"><a href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46">Management::readToyGraph</a></div><div class="ttdeci">void readToyGraph()</div><div class="ttdoc">Lê um Toy Graph.</div><div class="ttdef"><b>Definition:</b> Management.cpp:222</div></div>
+<div class="ttc" id="aclass_management_html_a1fda9479676dd4cd997c2b2b90beb2a6"><div class="ttname"><a href="class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6">Management::readInput</a></div><div class="ttdeci">static std::string readInput()</div><div class="ttdoc">Lê o input do utilizador.</div><div class="ttdef"><b>Definition:</b> Management.cpp:22</div></div>
+<div class="ttc" id="aclass_management_html_a500dd48e210cc0325973fa9a588d45d2"><div class="ttname"><a href="class_management.html#a500dd48e210cc0325973fa9a588d45d2">Management::menu</a></div><div class="ttdeci">bool menu()</div><div class="ttdoc">Apresenta o menu principal e permite selecionar uma das opções apresentadas.</div><div class="ttdef"><b>Definition:</b> Management.cpp:65</div></div>
+<div class="ttc" id="aclass_management_html_a52b43f9d60bf05268b016461f8c15504"><div class="ttname"><a href="class_management.html#a52b43f9d60bf05268b016461f8c15504">Management::validateInt</a></div><div class="ttdeci">static int validateInt(int n, int min, int max)</div><div class="ttdoc">Valida um número inteiro, isto é, verifica se n pertence ao intervalo [min, max]. Enquanto o número f...</div><div class="ttdef"><b>Definition:</b> Management.cpp:45</div></div>
+<div class="ttc" id="aclass_management_html_a5af65dfd4f7389d3d8b7c9df22494cc5"><div class="ttname"><a href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5">Management::checkDataset</a></div><div class="ttdeci">void checkDataset()</div><div class="ttdoc">Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar....</div><div class="ttdef"><b>Definition:</b> Management.cpp:274</div></div>
+<div class="ttc" id="aclass_management_html_a6f1ad2a8d1ecc20dae89fc4efa6f197e"><div class="ttname"><a href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e">Management::readMediumSizeGraph</a></div><div class="ttdeci">void readMediumSizeGraph()</div><div class="ttdoc">Lê um Medium-Size Graph.</div><div class="ttdef"><b>Definition:</b> Management.cpp:241</div></div>
+<div class="ttc" id="aclass_management_html_a71c7bae62a2b7ada96fa7988d45dcfae"><div class="ttname"><a href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae">Management::triangularApproximationHeuristic</a></div><div class="ttdeci">void triangularApproximationHeuristic()</div><div class="ttdoc">Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr...</div><div class="ttdef"><b>Definition:</b> Management.cpp:300</div></div>
+<div class="ttc" id="aclass_management_html_a7d825646d90b67c56d5f6ab30661c505"><div class="ttname"><a href="class_management.html#a7d825646d90b67c56d5f6ab30661c505">Management::graphFile</a></div><div class="ttdeci">std::string graphFile</div><div class="ttdef"><b>Definition:</b> Management.h:25</div></div>
+<div class="ttc" id="aclass_management_html_a9a0072306ebd07880ae36e96b2f64d45"><div class="ttname"><a href="class_management.html#a9a0072306ebd07880ae36e96b2f64d45">Management::readEdgesFile</a></div><div class="ttdeci">bool readEdgesFile()</div><div class="ttdoc">Lê o ficheiro de arestas e preenche o grafo com as arestas.</div><div class="ttdef"><b>Definition:</b> Management.cpp:117</div></div>
+<div class="ttc" id="aclass_management_html_a9a681204c7811e98cc7d59d7e71710c0"><div class="ttname"><a href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0">Management::backtrackingAlgorithm</a></div><div class="ttdeci">void backtrackingAlgorithm()</div><div class="ttdoc">Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.</div><div class="ttdef"><b>Definition:</b> Management.cpp:284</div></div>
+<div class="ttc" id="aclass_management_html_a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c"><div class="ttname"><a href="class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c">Management::readNodesFile</a></div><div class="ttdeci">bool readNodesFile()</div><div class="ttdoc">Lê o ficheiro de nós e cria os nós do grafo.</div><div class="ttdef"><b>Definition:</b> Management.cpp:88</div></div>
+<div class="ttc" id="aclass_management_html_a9c54b60671d4bc8d5c5f2b5d38f2b6b4"><div class="ttname"><a href="class_management.html#a9c54b60671d4bc8d5c5f2b5d38f2b6b4">Management::edgesFile</a></div><div class="ttdeci">std::string edgesFile</div><div class="ttdef"><b>Definition:</b> Management.h:24</div></div>
+<div class="ttc" id="aclass_management_html_a9ee0cf00268769c605d5f91bd86ed187"><div class="ttname"><a href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187">Management::readGraphFile</a></div><div class="ttdeci">bool readGraphFile(bool header)</div><div class="ttdoc">Lê o ficheiro do grafo e cria o grafo.</div><div class="ttdef"><b>Definition:</b> Management.cpp:149</div></div>
+<div class="ttc" id="aclass_management_html_aa03d973402ca8328c3dc063b66596355"><div class="ttname"><a href="class_management.html#aa03d973402ca8328c3dc063b66596355">Management::validateInt</a></div><div class="ttdeci">static int validateInt(int n, const std::unordered_set&lt; int &gt; &amp;valid)</div><div class="ttdoc">Valida um número inteiro, isto é, verifica se n pertence ao conjunto valid. Enquanto o número for inv...</div></div>
+<div class="ttc" id="aclass_management_html_ad943e13af733386a577e928fc3bb231c"><div class="ttname"><a href="class_management.html#ad943e13af733386a577e928fc3bb231c">Management::readDataset</a></div><div class="ttdeci">void readDataset()</div><div class="ttdoc">Lê os ficheiros de dados, depois de limpar os dados anteriores.</div><div class="ttdef"><b>Definition:</b> Management.cpp:197</div></div>
+<div class="ttc" id="aclass_management_html_ae38c0c42bf0fd4c96f4d3f251e766a17"><div class="ttname"><a href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17">Management::ourHeuristic</a></div><div class="ttdeci">void ourHeuristic()</div><div class="ttdoc">Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu...</div><div class="ttdef"><b>Definition:</b> Management.cpp:328</div></div>
+<div class="ttc" id="aclass_management_html_ae734fc2de51ca2f0ce27bb31e4bd22df"><div class="ttname"><a href="class_management.html#ae734fc2de51ca2f0ce27bb31e4bd22df">Management::filesRead</a></div><div class="ttdeci">bool filesRead</div><div class="ttdef"><b>Definition:</b> Management.h:26</div></div>
+<div class="ttc" id="aclass_management_html_af09213090584929923fcc1a7969a4f1d"><div class="ttname"><a href="class_management.html#af09213090584929923fcc1a7969a4f1d">Management::graph</a></div><div class="ttdeci">Graph graph</div><div class="ttdef"><b>Definition:</b> Management.h:27</div></div>
+<div class="ttc" id="aclass_management_html_af7070dac89fca8ea7276a7c0bfc96422"><div class="ttname"><a href="class_management.html#af7070dac89fca8ea7276a7c0bfc96422">Management::nodesFile</a></div><div class="ttdeci">std::string nodesFile</div><div class="ttdef"><b>Definition:</b> Management.h:23</div></div>
+<div class="ttc" id="aclass_management_html_afd130eb8a34de069a8cde49a32fbf134"><div class="ttname"><a href="class_management.html#afd130eb8a34de069a8cde49a32fbf134">Management::readInt</a></div><div class="ttdeci">static int readInt()</div><div class="ttdoc">Lê o input do utilizador, forçando que seja um número inteiro não negativo.</div><div class="ttdef"><b>Definition:</b> Management.cpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

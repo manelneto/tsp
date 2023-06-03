@@ -1,0 +1,8 @@
+<map id="Graph::tspTwoOptSwap" name="Graph::tspTwoOptSwap">
+<area shape="rect" id="node1" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="5,55,164,80"/>
+<area shape="rect" id="node2" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="215,5,338,31"/>
+<area shape="rect" id="node4" href="$class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="212,55,341,80"/>
+<area shape="rect" id="node5" href="$class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="219,104,335,129"/>
+<area shape="rect" id="node3" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="393,5,482,31"/>
+<area shape="rect" id="node6" href="$class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="389,104,485,129"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="Graph::tspNearestNeighbor" name="Graph::tspNearestNeighbor">
+<area shape="rect" id="node1" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="5,231,184,256"/>
+<area shape="rect" id="node2" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="262,5,385,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="466,31,555,56"/>
+<area shape="rect" id="node4" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="271,107,376,132"/>
+<area shape="rect" id="node5" href="$class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="259,156,388,181"/>
+<area shape="rect" id="node6" href="$class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="265,205,381,231"/>
+<area shape="rect" id="node7" href="$class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="463,231,559,256"/>
+<area shape="rect" id="node8" href="$class_vertex.html#ab97fd6a83693e280122a851f69c6ded7" title="Retorna (se existir) a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar." alt="" coords="232,307,415,332"/>
+<area shape="rect" id="node9" href="$class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="255,356,392,381"/>
+<area shape="rect" id="node10" href="$class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="267,405,380,431"/>
+<area shape="rect" id="node11" href="$class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Define estado visitado do vértice como visited." alt="" coords="260,455,387,480"/>
+</map>

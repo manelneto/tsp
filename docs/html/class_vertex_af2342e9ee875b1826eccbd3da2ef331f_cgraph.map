@@ -1,0 +1,4 @@
+<map id="Vertex::getEdge" name="Vertex::getEdge">
+<area shape="rect" id="node1" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="5,5,121,31"/>
+<area shape="rect" id="node2" href="$class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="169,5,265,31"/>
+</map>

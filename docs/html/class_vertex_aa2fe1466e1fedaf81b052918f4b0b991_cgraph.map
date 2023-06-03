@@ -1,0 +1,6 @@
+<map id="Vertex::calculateDistance" name="Vertex::calculateDistance">
+<area shape="rect" id="node1" title="Calcula a distância entre o vértice e vertex através do método de Haversine." alt="" coords="5,55,176,80"/>
+<area shape="rect" id="node2" href="$class_vertex.html#a7455a09de51b274867edae2254cef38d" title="Retorna a latitude do vértice." alt="" coords="229,5,361,31"/>
+<area shape="rect" id="node3" href="$class_vertex.html#af1a2bee6c38f511cbfea082eb7149537" title="Retorna a longitude do vértice." alt="" coords="224,55,367,80"/>
+<area shape="rect" id="node4" href="$class_vertex.html#ad988c8d5d394e051b553db6b051381dc" title="Converte um ângulo em graus para radianos." alt="" coords="232,104,359,129"/>
+</map>

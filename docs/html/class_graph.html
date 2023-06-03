@@ -1,0 +1,1062 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Routing Algorithm for Ocean Shipping and Urban Deliveries: Referência à classe Graph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Routing Algorithm for Ocean Shipping and Urban Deliveries<span id="projectnumber">&#160;DA</span>
+   </div>
+   <div id="projectbrief">Programming Project II</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="class_graph-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência à classe Graph</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_graph_8h_source.html">Graph.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para Graph:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph__coll__graph.png" border="0" usemap="#a_graph_coll__map" alt="Collaboration graph"/></div>
+<map name="a_graph_coll__map" id="a_graph_coll__map">
+<area shape="rect" title=" " alt="" coords="35,108,234,353"/>
+<area shape="rect" title=" " alt="" coords="5,5,136,45"/>
+<area shape="rect" title=" " alt="" coords="161,5,239,45"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:a9abc0a3e3036c08d5edc99328e6b658b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b">findVertex</a> (const unsigned &amp;id) const</td></tr>
+<tr class="memdesc:a9abc0a3e3036c08d5edc99328e6b658b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura o vértice do grafo pelo seu id.  <a href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b">Mais...</a><br /></td></tr>
+<tr class="separator:a9abc0a3e3036c08d5edc99328e6b658b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06255952528b7b497d8a8b7d4ce66045"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045">addVertex</a> (const unsigned &amp;id, const double &amp;longitude=0.0, const double &amp;latitude=0.0)</td></tr>
+<tr class="memdesc:a06255952528b7b497d8a8b7d4ce66045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona ao grafo um vértice com id, longitude e latitude.  <a href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045">Mais...</a><br /></td></tr>
+<tr class="separator:a06255952528b7b497d8a8b7d4ce66045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebef256c5ff91a1a4f3dc33bed067356"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356">addEdge</a> (const unsigned &amp;orig, const unsigned &amp;dest, const double &amp;distance)</td></tr>
+<tr class="memdesc:aebef256c5ff91a1a4f3dc33bed067356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id dest, com distância distance.  <a href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356">Mais...</a><br /></td></tr>
+<tr class="separator:aebef256c5ff91a1a4f3dc33bed067356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8983d3c1b5cc85ff97b122b66f640fdc"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc">size</a> () const</td></tr>
+<tr class="memdesc:a8983d3c1b5cc85ff97b122b66f640fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tamanho (número de nós) do grafo.  <a href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc">Mais...</a><br /></td></tr>
+<tr class="separator:a8983d3c1b5cc85ff97b122b66f640fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6192a41101102ca8aa6acca607c84f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ac6192a41101102ca8aa6acca607c84f3">clear</a> ()</td></tr>
+<tr class="memdesc:ac6192a41101102ca8aa6acca607c84f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa o grafo, i. e., remove todos os seus vértices.  <a href="class_graph.html#ac6192a41101102ca8aa6acca607c84f3">Mais...</a><br /></td></tr>
+<tr class="separator:ac6192a41101102ca8aa6acca607c84f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9d259a31bad0d250d39fc6b21c3457"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a6c9d259a31bad0d250d39fc6b21c3457">isComplete</a> () const</td></tr>
+<tr class="memdesc:a6c9d259a31bad0d250d39fc6b21c3457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica se o grafo é completo.  <a href="class_graph.html#a6c9d259a31bad0d250d39fc6b21c3457">Mais...</a><br /></td></tr>
+<tr class="separator:a6c9d259a31bad0d250d39fc6b21c3457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fde8d3648a209a83b71515166d9c51f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8fde8d3648a209a83b71515166d9c51f">tspBacktracking</a> (std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a8fde8d3648a209a83b71515166d9c51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.  <a href="class_graph.html#a8fde8d3648a209a83b71515166d9c51f">Mais...</a><br /></td></tr>
+<tr class="separator:a8fde8d3648a209a83b71515166d9c51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185d52aac9cae561fc650c519b5492bd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd">tspTriangularApproximation</a> (std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a185d52aac9cae561fc650c519b5492bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular.  <a href="class_graph.html#a185d52aac9cae561fc650c519b5492bd">Mais...</a><br /></td></tr>
+<tr class="separator:a185d52aac9cae561fc650c519b5492bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7005561ddcfbf7c1e036ab77dd0ccb"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb">tspHeuristic</a> (std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a2b7005561ddcfbf7c1e036ab77dd0ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias heurísticas: Nearest Neighbor para a construção do caminho e Simulated Annealing com 2-opt para a otimização.  <a href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb">Mais...</a><br /></td></tr>
+<tr class="separator:a2b7005561ddcfbf7c1e036ab77dd0ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:ad276ffc9b47305b0f8067eb1ec816976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad276ffc9b47305b0f8067eb1ec816976">tspBacktracking</a> (unsigned currentIndex, double currentCost, std::vector&lt; unsigned &gt; &amp;currentPath, double &amp;minCost, std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:ad276ffc9b47305b0f8067eb1ec816976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função auxiliar recursiva para resolver o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking.  <a href="class_graph.html#ad276ffc9b47305b0f8067eb1ec816976">Mais...</a><br /></td></tr>
+<tr class="separator:ad276ffc9b47305b0f8067eb1ec816976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd313301739057ac1af4bbb51147f277"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="class_graph.html">Graph</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#afd313301739057ac1af4bbb51147f277">mstPrim</a> () const</td></tr>
+<tr class="memdesc:afd313301739057ac1af4bbb51147f277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim.  <a href="class_graph.html#afd313301739057ac1af4bbb51147f277">Mais...</a><br /></td></tr>
+<tr class="separator:afd313301739057ac1af4bbb51147f277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3b187badeaa702ee006cde7c40afca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8a3b187badeaa702ee006cde7c40afca">tspNearestNeighbor</a> (std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a8a3b187badeaa702ee006cde7c40afca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Neighbor.  <a href="class_graph.html#a8a3b187badeaa702ee006cde7c40afca">Mais...</a><br /></td></tr>
+<tr class="separator:a8a3b187badeaa702ee006cde7c40afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce0237f44c07ebc7dc159496ac65505"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, std::vector&lt; unsigned &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505">tspTwoOptSwap</a> (double cost, const std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a5ce0237f44c07ebc7dc159496ac65505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza uma operação de troca 2-opt entre duas arestas do circuito para resolver (de forma aproximada) o Travelling Salesperson Problem (TSP).  <a href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505">Mais...</a><br /></td></tr>
+<tr class="separator:a5ce0237f44c07ebc7dc159496ac65505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8f8c6629b93d8be7836962535b261c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c">tspSimulatedAnnealing</a> (double cost, std::vector&lt; unsigned &gt; &amp;circuit) const</td></tr>
+<tr class="memdesc:a7e8f8c6629b93d8be7836962535b261c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heurística Simulated Annealing.  <a href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c">Mais...</a><br /></td></tr>
+<tr class="separator:a7e8f8c6629b93d8be7836962535b261c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:aa9b0a6d8ad43c5eabaca5a7140bcc8b6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aa9b0a6d8ad43c5eabaca5a7140bcc8b6">vertexSet</a></td></tr>
+<tr class="separator:aa9b0a6d8ad43c5eabaca5a7140bcc8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491012fc1bffb02701b0b0a16a678761"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a491012fc1bffb02701b0b0a16a678761">edges</a> = 0</td></tr>
+<tr class="separator:a491012fc1bffb02701b0b0a16a678761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="aebef256c5ff91a1a4f3dc33bed067356" name="aebef256c5ff91a1a4f3dc33bed067356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebef256c5ff91a1a4f3dc33bed067356">&#9670;&#160;</a></span>addEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::addEdge </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>orig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id dest, com distância distance. </p>
+<p >Complexidade Temporal: O(log n), sendo n o tamanho da lista de adjacências do vértice de origem/destino </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig</td><td>id do vértice de origem da aresta a adicionar </td></tr>
+    <tr><td class="paramname">dest</td><td>id do vértice de destino da aresta a adicionar </td></tr>
+    <tr><td class="paramname">distance</td><td>distância da aresta a adicionar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se a operação foi bem-sucedida, false caso contrário (não existe no grafo nenhum vértice com id orig ou com id dest) </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_aebef256c5ff91a1a4f3dc33bed067356_cgraph.png" border="0" usemap="#aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_cgraph" alt=""/></div>
+<map name="aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_cgraph" id="aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_cgraph">
+<area shape="rect" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="5,31,121,56"/>
+<area shape="rect" href="class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="171,5,290,31"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="169,55,292,80"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="340,55,429,80"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_aebef256c5ff91a1a4f3dc33bed067356_icgraph.png" border="0" usemap="#aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_icgraph" alt=""/></div>
+<map name="aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_icgraph" id="aclass_graph_aebef256c5ff91a1a4f3dc33bed067356_icgraph">
+<area shape="rect" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="1569,70,1685,95"/>
+<area shape="rect" href="class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="1370,17,1485,42"/>
+<area shape="rect" href="class_management.html#a9a0072306ebd07880ae36e96b2f64d45" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="1333,70,1521,95"/>
+<area shape="rect" href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="1334,134,1521,159"/>
+<area shape="rect" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="812,13,1035,38"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,5,531,45"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,106,241,131"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,106,56,131"/>
+<area shape="rect" href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1089,63,1279,103"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="836,134,1011,159"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,106,764,131"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,69,499,109"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,134,497,159"/>
+<area shape="rect" href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1083,127,1285,167"/>
+<area shape="rect" href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1091,191,1277,217"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06255952528b7b497d8a8b7d4ce66045" name="a06255952528b7b497d8a8b7d4ce66045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06255952528b7b497d8a8b7d4ce66045">&#9670;&#160;</a></span>addVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::addVertex </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>longitude</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>latitude</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona ao grafo um vértice com id, longitude e latitude. </p>
+<p >Complexidade Temporal: O(1) </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id do vértice a adicionar </td></tr>
+    <tr><td class="paramname">longitude</td><td>longitude do vértice a adicionar </td></tr>
+    <tr><td class="paramname">latitude</td><td>latitude do vértice a adicionar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se a operação foi bem-sucedida, false caso contrário (já existia no grafo um vértice com o mesmo id) </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a06255952528b7b497d8a8b7d4ce66045_cgraph.png" border="0" usemap="#aclass_graph_a06255952528b7b497d8a8b7d4ce66045_cgraph" alt=""/></div>
+<map name="aclass_graph_a06255952528b7b497d8a8b7d4ce66045_cgraph" id="aclass_graph_a06255952528b7b497d8a8b7d4ce66045_cgraph">
+<area shape="rect" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="5,5,129,31"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="177,5,300,31"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="348,5,437,31"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a06255952528b7b497d8a8b7d4ce66045_icgraph.png" border="0" usemap="#aclass_graph_a06255952528b7b497d8a8b7d4ce66045_icgraph" alt=""/></div>
+<map name="aclass_graph_a06255952528b7b497d8a8b7d4ce66045_icgraph" id="aclass_graph_a06255952528b7b497d8a8b7d4ce66045_icgraph">
+<area shape="rect" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="1569,111,1693,137"/>
+<area shape="rect" href="class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="1370,30,1485,55"/>
+<area shape="rect" href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="1334,111,1521,137"/>
+<area shape="rect" href="class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c" title="Lê o ficheiro de nós e cria os nós do grafo." alt="" coords="1333,165,1521,190"/>
+<area shape="rect" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="812,13,1035,38"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,5,531,45"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,106,241,131"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,106,56,131"/>
+<area shape="rect" href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1083,63,1285,103"/>
+<area shape="rect" href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1091,127,1277,153"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="836,127,1011,153"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,102,764,127"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,69,499,109"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,134,497,159"/>
+<area shape="rect" href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1089,177,1279,217"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6192a41101102ca8aa6acca607c84f3" name="ac6192a41101102ca8aa6acca607c84f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6192a41101102ca8aa6acca607c84f3">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpa o grafo, i. e., remove todos os seus vértices. </p>
+<p >Complexidade Temporal: O(1) </p>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_ac6192a41101102ca8aa6acca607c84f3_icgraph.png" border="0" usemap="#aclass_graph_ac6192a41101102ca8aa6acca607c84f3_icgraph" alt=""/></div>
+<map name="aclass_graph_ac6192a41101102ca8aa6acca607c84f3_icgraph" id="aclass_graph_ac6192a41101102ca8aa6acca607c84f3_icgraph">
+<area shape="rect" title="Limpa o grafo, i. e., remove todos os seus vértices." alt="" coords="1035,157,1128,182"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="812,157,987,182"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,99,764,125"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,99,241,125"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,5,499,45"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,70,497,95"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,120,531,160"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,99,56,125"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9abc0a3e3036c08d5edc99328e6b658b" name="a9abc0a3e3036c08d5edc99328e6b658b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abc0a3e3036c08d5edc99328e6b658b">&#9670;&#160;</a></span>findVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vertex.html">Vertex</a> * Graph::findVertex </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procura o vértice do grafo pelo seu id. </p>
+<p >Complexidade Temporal: O(1) </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id do vértice a procurar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>apontador para o vértice encontrado </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a9abc0a3e3036c08d5edc99328e6b658b_cgraph.png" border="0" usemap="#aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_cgraph" alt=""/></div>
+<map name="aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_cgraph" id="aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_cgraph">
+<area shape="rect" title="Procura o vértice do grafo pelo seu id." alt="" coords="5,5,128,31"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="176,5,265,31"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a9abc0a3e3036c08d5edc99328e6b658b_icgraph.png" border="0" usemap="#aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_icgraph" alt=""/></div>
+<map name="aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_icgraph" id="aclass_graph_a9abc0a3e3036c08d5edc99328e6b658b_icgraph">
+<area shape="rect" title="Procura o vértice do grafo pelo seu id." alt="" coords="1779,122,1901,147"/>
+<area shape="rect" href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="1583,97,1699,122"/>
+<area shape="rect" href="class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="1347,46,1462,71"/>
+<area shape="rect" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="1035,19,1257,45"/>
+<area shape="rect" href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="1579,146,1703,171"/>
+<area shape="rect" href="class_graph.html#a8a3b187badeaa702ee006cde7c40afca" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="1552,281,1731,306"/>
+<area shape="rect" href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="1562,207,1721,233"/>
+<area shape="rect" href="class_management.html#a9a0072306ebd07880ae36e96b2f64d45" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="1311,145,1499,170"/>
+<area shape="rect" href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="1311,95,1498,121"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,37,531,77"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,131,241,157"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,131,56,157"/>
+<area shape="rect" href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1051,183,1241,223"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="812,126,987,151"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,157,764,182"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,152,499,192"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,217,497,242"/>
+<area shape="rect" href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1045,119,1247,159"/>
+<area shape="rect" href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1053,69,1239,94"/>
+<area shape="rect" href="class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c" title="Lê o ficheiro de nós e cria os nós do grafo." alt="" coords="1311,194,1499,219"/>
+<area shape="rect" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="1079,247,1213,273"/>
+<area shape="rect" href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="1305,243,1504,269"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c9d259a31bad0d250d39fc6b21c3457" name="a6c9d259a31bad0d250d39fc6b21c3457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9d259a31bad0d250d39fc6b21c3457">&#9670;&#160;</a></span>isComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::isComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica se o grafo é completo. </p>
+<p >Complexidade Temporal: O(1) </p><dl class="section return"><dt>Retorna</dt><dd>true se o grafo é completo, false caso contrário </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a6c9d259a31bad0d250d39fc6b21c3457_cgraph.png" border="0" usemap="#aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_cgraph" alt=""/></div>
+<map name="aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_cgraph" id="aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_cgraph">
+<area shape="rect" title="Indica se o grafo é completo." alt="" coords="5,5,136,31"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="184,5,273,31"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a6c9d259a31bad0d250d39fc6b21c3457_icgraph.png" border="0" usemap="#aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_icgraph" alt=""/></div>
+<map name="aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_icgraph" id="aclass_graph_a6c9d259a31bad0d250d39fc6b21c3457_icgraph">
+<area shape="rect" title="Indica se o grafo é completo." alt="" coords="1035,37,1165,63"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,5,497,31"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="812,63,987,88"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,95,241,120"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,95,56,120"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,63,764,88"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,55,499,95"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,119,531,159"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd313301739057ac1af4bbb51147f277" name="afd313301739057ac1af4bbb51147f277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd313301739057ac1af4bbb51147f277">&#9670;&#160;</a></span>mstPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt; double, <a class="el" href="class_graph.html">Graph</a> &gt; Graph::mstPrim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim. </p>
+<p >Complexidade Temporal: O(E log(V)), sendo V o número de vértices do grafo e E o número de arestas do grafo </p><dl class="section return"><dt>Retorna</dt><dd>par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada e o segundo valor é a Minimum Cost Spanning Tree (MST) determinada </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_afd313301739057ac1af4bbb51147f277_cgraph.png" border="0" usemap="#aclass_graph_afd313301739057ac1af4bbb51147f277_cgraph" alt=""/></div>
+<map name="aclass_graph_afd313301739057ac1af4bbb51147f277_cgraph" id="aclass_graph_afd313301739057ac1af4bbb51147f277_cgraph">
+<area shape="rect" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="5,399,120,424"/>
+<area shape="rect" href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="183,5,299,31"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="363,56,485,81"/>
+<area shape="rect" href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="179,107,303,132"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title="Atualiza a prioridade do elemento x (aumentando&#45;a, diminuindo o índice) e reajusta a fila de priorida..." alt="" coords="168,157,315,197"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title="Verifica se a fila de prioridade mutável não contém elementos, i. e., se o seu tamanho é 1." alt="" coords="168,221,315,261"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a3880874d7364279ac0d6d31302b28853" title="Retorna o elemento mais prioritário (menor índice) da fila de prioridade mutável, retira&#45;o da fila e ..." alt="" coords="168,285,315,325"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="189,349,294,375"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="177,399,306,424"/>
+<area shape="rect" href="class_vertex.html#a027ec4f44cde7ec1b6481854a2980127" title="Retorna a distância do vértice." alt="" coords="173,448,310,473"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="193,497,289,523"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Retorna a origem da aresta." alt="" coords="190,547,293,572"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a058fc182052af82e10cc3719e448b62d" title="Insere o elemento x na fila de prioridade mutável e reajusta a fila." alt="" coords="168,597,315,637"/>
+<area shape="rect" href="class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Indica se o vértice foi visitado." alt="" coords="182,661,301,687"/>
+<area shape="rect" href="class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="173,711,310,736"/>
+<area shape="rect" href="class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="185,760,298,785"/>
+<area shape="rect" href="class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="365,5,483,31"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="533,56,623,81"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_afd313301739057ac1af4bbb51147f277_icgraph.png" border="0" usemap="#aclass_graph_afd313301739057ac1af4bbb51147f277_icgraph" alt=""/></div>
+<map name="aclass_graph_afd313301739057ac1af4bbb51147f277_icgraph" id="aclass_graph_afd313301739057ac1af4bbb51147f277_icgraph">
+<area shape="rect" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="849,13,964,38"/>
+<area shape="rect" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="579,13,801,38"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,5,531,45"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,13,241,38"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8983d3c1b5cc85ff97b122b66f640fdc" name="a8983d3c1b5cc85ff97b122b66f640fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8983d3c1b5cc85ff97b122b66f640fdc">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Graph::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tamanho (número de nós) do grafo. </p>
+<p >Complexidade Temporal: O(1) </p><dl class="section return"><dt>Retorna</dt><dd>tamanho (número de nós) do grafo </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a8983d3c1b5cc85ff97b122b66f640fdc_icgraph.png" border="0" usemap="#aclass_graph_a8983d3c1b5cc85ff97b122b66f640fdc_icgraph" alt=""/></div>
+<map name="aclass_graph_a8983d3c1b5cc85ff97b122b66f640fdc_icgraph" id="aclass_graph_a8983d3c1b5cc85ff97b122b66f640fdc_icgraph">
+<area shape="rect" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="1949,334,2039,360"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="1779,184,1901,209"/>
+<area shape="rect" href="class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="1035,80,1257,105"/>
+<area shape="rect" href="class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="812,273,987,298"/>
+<area shape="rect" href="class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="1311,166,1498,192"/>
+<area shape="rect" href="class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c" title="Lê o ficheiro de nós e cria os nós do grafo." alt="" coords="1311,265,1499,290"/>
+<area shape="rect" href="class_graph.html#a8a3b187badeaa702ee006cde7c40afca" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="1552,334,1731,360"/>
+<area shape="rect" href="class_graph.html#a6c9d259a31bad0d250d39fc6b21c3457" title="Indica se o grafo é completo." alt="" coords="1081,486,1211,512"/>
+<area shape="rect" href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="1583,134,1699,160"/>
+<area shape="rect" href="class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="1347,94,1462,120"/>
+<area shape="rect" href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="1579,184,1703,209"/>
+<area shape="rect" href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="1562,285,1721,310"/>
+<area shape="rect" href="class_management.html#a9a0072306ebd07880ae36e96b2f64d45" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="1311,216,1499,241"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,211,531,251"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,250,241,276"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,250,56,276"/>
+<area shape="rect" href="class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1051,266,1241,306"/>
+<area shape="rect" href="class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,278,764,304"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,275,499,315"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,340,497,365"/>
+<area shape="rect" href="class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1045,151,1247,191"/>
+<area shape="rect" href="class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1053,216,1239,241"/>
+<area shape="rect" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="1079,340,1213,365"/>
+<area shape="rect" href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="1305,314,1504,340"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8fde8d3648a209a83b71515166d9c51f" name="a8fde8d3648a209a83b71515166d9c51f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fde8d3648a209a83b71515166d9c51f">&#9670;&#160;</a></span>tspBacktracking() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Graph::tspBacktracking </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking. </p>
+<p >Complexidade Temporal: O(V!), sendo V o número de vértices </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit</td><td>circuito encontrado como solução para o Travelling Salesperson Problem (TSP) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>custo do circuito encontrado como solução para o Travelling Salesperson Problem (TSP) </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a8fde8d3648a209a83b71515166d9c51f_icgraph.png" border="0" usemap="#aclass_graph_a8fde8d3648a209a83b71515166d9c51f_icgraph" alt=""/></div>
+<map name="aclass_graph_a8fde8d3648a209a83b71515166d9c51f_icgraph" id="aclass_graph_a8fde8d3648a209a83b71515166d9c51f_icgraph">
+<area shape="rect" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="516,13,675,38"/>
+<area shape="rect" href="class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="289,5,468,45"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,13,241,38"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad276ffc9b47305b0f8067eb1ec816976" name="ad276ffc9b47305b0f8067eb1ec816976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad276ffc9b47305b0f8067eb1ec816976">&#9670;&#160;</a></span>tspBacktracking() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::tspBacktracking </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>currentIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>currentCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>currentPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>minCost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função auxiliar recursiva para resolver o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking. </p>
+<p >Complexidade Temporal: O(V!), sendo V o número de vértices </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentIndex</td><td>índice atual do nó a analisar no circuito </td></tr>
+    <tr><td class="paramname">currentCost</td><td>custo atual do circuito encontrado </td></tr>
+    <tr><td class="paramname">currentPath</td><td>circuito encontrado até ao momento </td></tr>
+    <tr><td class="paramname">minCost</td><td>custo mínimo do circuito encontrado até ao momento </td></tr>
+    <tr><td class="paramname">circuit</td><td>circuito encontrado como solução para o Travelling Salesperson Problem (TSP) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2b7005561ddcfbf7c1e036ab77dd0ccb" name="a2b7005561ddcfbf7c1e036ab77dd0ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7005561ddcfbf7c1e036ab77dd0ccb">&#9670;&#160;</a></span>tspHeuristic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt; double, double &gt; Graph::tspHeuristic </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias heurísticas: Nearest Neighbor para a construção do caminho e Simulated Annealing com 2-opt para a otimização. </p>
+<p >Complexidade Temporal: O(V<sup>2</sup>), sendo V o número de vértices do grafo </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit</td><td>circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>par cujo primeiro valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) antes da otimização e o segundo valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) depois da otimização </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_cgraph.png" border="0" usemap="#aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_cgraph" alt=""/></div>
+<map name="aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_cgraph" id="aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_cgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="5,143,140,168"/>
+<area shape="rect" href="class_graph.html#a8a3b187badeaa702ee006cde7c40afca" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="435,205,613,231"/>
+<area shape="rect" href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="188,92,387,117"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="691,104,814,129"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="895,155,985,180"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="700,404,805,429"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="688,55,817,80"/>
+<area shape="rect" href="class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="695,5,811,31"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="892,105,988,131"/>
+<area shape="rect" href="class_vertex.html#ab97fd6a83693e280122a851f69c6ded7" title="Retorna (se existir) a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar." alt="" coords="661,453,844,479"/>
+<area shape="rect" href="class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="684,256,821,281"/>
+<area shape="rect" href="class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="696,305,809,331"/>
+<area shape="rect" href="class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Define estado visitado do vértice como visited." alt="" coords="689,355,816,380"/>
+<area shape="rect" href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="445,80,603,105"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_icgraph.png" border="0" usemap="#aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_icgraph" alt=""/></div>
+<map name="aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_icgraph" id="aclass_graph_a2b7005561ddcfbf7c1e036ab77dd0ccb_icgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="512,5,647,31"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="289,5,464,31"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,5,241,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a3b187badeaa702ee006cde7c40afca" name="a8a3b187badeaa702ee006cde7c40afca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3b187badeaa702ee006cde7c40afca">&#9670;&#160;</a></span>tspNearestNeighbor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Graph::tspNearestNeighbor </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Neighbor. </p>
+<p >Complexidade Temporal: O(V<sup>2</sup>), sendo V o número de vértices do grafo </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit</td><td>circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a8a3b187badeaa702ee006cde7c40afca_cgraph.png" border="0" usemap="#aclass_graph_a8a3b187badeaa702ee006cde7c40afca_cgraph" alt=""/></div>
+<map name="aclass_graph_a8a3b187badeaa702ee006cde7c40afca_cgraph" id="aclass_graph_a8a3b187badeaa702ee006cde7c40afca_cgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="5,231,184,256"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="262,5,385,31"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="466,31,555,56"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="271,107,376,132"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="259,156,388,181"/>
+<area shape="rect" href="class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="265,205,381,231"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="463,231,559,256"/>
+<area shape="rect" href="class_vertex.html#ab97fd6a83693e280122a851f69c6ded7" title="Retorna (se existir) a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar." alt="" coords="232,307,415,332"/>
+<area shape="rect" href="class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="255,356,392,381"/>
+<area shape="rect" href="class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="267,405,380,431"/>
+<area shape="rect" href="class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Define estado visitado do vértice como visited." alt="" coords="260,455,387,480"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a8a3b187badeaa702ee006cde7c40afca_icgraph.png" border="0" usemap="#aclass_graph_a8a3b187badeaa702ee006cde7c40afca_icgraph" alt=""/></div>
+<map name="aclass_graph_a8a3b187badeaa702ee006cde7c40afca_icgraph" id="aclass_graph_a8a3b187badeaa702ee006cde7c40afca_icgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="695,5,873,31"/>
+<area shape="rect" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="512,5,647,31"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="289,5,464,31"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,5,241,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7e8f8c6629b93d8be7836962535b261c" name="a7e8f8c6629b93d8be7836962535b261c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e8f8c6629b93d8be7836962535b261c">&#9670;&#160;</a></span>tspSimulatedAnnealing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Graph::tspSimulatedAnnealing </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heurística Simulated Annealing. </p>
+<p >Complexidade Temporal: O(n<sup>2</sup>), sendo n o tamanho do circuito encontrado antes da otimização </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cost</td><td>custo do circuito encontrado antes da otimização </td></tr>
+    <tr><td class="paramname">circuit</td><td>circuito a otimizar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>custo do circuito depois da otimização </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a7e8f8c6629b93d8be7836962535b261c_cgraph.png" border="0" usemap="#aclass_graph_a7e8f8c6629b93d8be7836962535b261c_cgraph" alt=""/></div>
+<map name="aclass_graph_a7e8f8c6629b93d8be7836962535b261c_cgraph" id="aclass_graph_a7e8f8c6629b93d8be7836962535b261c_cgraph">
+<area shape="rect" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="5,55,204,80"/>
+<area shape="rect" href="class_graph.html#a5ce0237f44c07ebc7dc159496ac65505" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="252,55,411,80"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="462,5,585,31"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="459,55,588,80"/>
+<area shape="rect" href="class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="465,104,581,129"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="639,5,729,31"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="636,104,732,129"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a7e8f8c6629b93d8be7836962535b261c_icgraph.png" border="0" usemap="#aclass_graph_a7e8f8c6629b93d8be7836962535b261c_icgraph" alt=""/></div>
+<map name="aclass_graph_a7e8f8c6629b93d8be7836962535b261c_icgraph" id="aclass_graph_a7e8f8c6629b93d8be7836962535b261c_icgraph">
+<area shape="rect" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="695,5,893,31"/>
+<area shape="rect" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="512,5,647,31"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="289,5,464,31"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,5,241,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a185d52aac9cae561fc650c519b5492bd" name="a185d52aac9cae561fc650c519b5492bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185d52aac9cae561fc650c519b5492bd">&#9670;&#160;</a></span>tspTriangularApproximation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pair&lt; double, double &gt; Graph::tspTriangularApproximation </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de aproximação triangular. </p>
+<p >Complexidade Temporal: O(V<sup>2</sup>), sendo V o número de vértices do grafo </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit</td><td>circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>par cujo primeiro valor é o custo da Minimum Cost Spanning Tree (MST) determinada para a heurística e o segundo valor é o custo do circuito encontrado como solução aproximada para o Travelling Salesperson Problem (TSP) </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a185d52aac9cae561fc650c519b5492bd_cgraph.png" border="0" usemap="#aclass_graph_a185d52aac9cae561fc650c519b5492bd_cgraph" alt=""/></div>
+<map name="aclass_graph_a185d52aac9cae561fc650c519b5492bd_cgraph" id="aclass_graph_a185d52aac9cae561fc650c519b5492bd_cgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="5,520,228,545"/>
+<area shape="rect" href="class_vertex.html#aa2fe1466e1fedaf81b052918f4b0b991" title="Calcula a distância entre o vértice e vertex através do método de Haversine." alt="" coords="276,80,447,105"/>
+<area shape="rect" href="class_vertex.html#aed8f36cf2c14be9b485d95aee3ee737e" title="Realiza uma Pesquisa em Profundidade (DFS) em pré&#45;ordem a partir do vértice." alt="" coords="294,393,429,419"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="689,857,812,883"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="860,933,949,959"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="503,153,633,179"/>
+<area shape="rect" href="class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="303,495,419,520"/>
+<area shape="rect" href="class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Indica se o vértice foi visitado." alt="" coords="509,907,627,932"/>
+<area shape="rect" href="class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="304,544,419,569"/>
+<area shape="rect" href="class_vertex.html#a7455a09de51b274867edae2254cef38d" title="Retorna a latitude do vértice." alt="" coords="502,5,634,31"/>
+<area shape="rect" href="class_vertex.html#af1a2bee6c38f511cbfea082eb7149537" title="Retorna a longitude do vértice." alt="" coords="497,55,639,80"/>
+<area shape="rect" href="class_vertex.html#ad988c8d5d394e051b553db6b051381dc" title="Converte um ângulo em graus para radianos." alt="" coords="505,104,631,129"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="520,203,616,228"/>
+<area shape="rect" href="class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="510,643,626,668"/>
+<area shape="rect" href="class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="506,857,630,883"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title="Atualiza a prioridade do elemento x (aumentando&#45;a, diminuindo o índice) e reajusta a fila de priorida..." alt="" coords="495,351,641,391"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title="Verifica se a fila de prioridade mutável não contém elementos, i. e., se o seu tamanho é 1." alt="" coords="495,415,641,455"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a3880874d7364279ac0d6d31302b28853" title="Retorna o elemento mais prioritário (menor índice) da fila de prioridade mutável, retira&#45;o da fila e ..." alt="" coords="495,479,641,519"/>
+<area shape="rect" href="class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="515,544,621,569"/>
+<area shape="rect" href="class_vertex.html#a027ec4f44cde7ec1b6481854a2980127" title="Retorna a distância do vértice." alt="" coords="499,593,637,619"/>
+<area shape="rect" href="class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Retorna a origem da aresta." alt="" coords="517,692,619,717"/>
+<area shape="rect" href="class_mutable_priority_queue.html#a058fc182052af82e10cc3719e448b62d" title="Insere o elemento x na fila de prioridade mutável e reajusta a fila." alt="" coords="495,742,641,782"/>
+<area shape="rect" href="class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="499,252,637,277"/>
+<area shape="rect" href="class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="511,301,625,327"/>
+<area shape="rect" href="class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="691,643,810,668"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a185d52aac9cae561fc650c519b5492bd_icgraph.png" border="0" usemap="#aclass_graph_a185d52aac9cae561fc650c519b5492bd_icgraph" alt=""/></div>
+<map name="aclass_graph_a185d52aac9cae561fc650c519b5492bd_icgraph" id="aclass_graph_a185d52aac9cae561fc650c519b5492bd_icgraph">
+<area shape="rect" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="579,13,801,38"/>
+<area shape="rect" href="class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,5,531,45"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,13,241,38"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ce0237f44c07ebc7dc159496ac65505" name="a5ce0237f44c07ebc7dc159496ac65505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce0237f44c07ebc7dc159496ac65505">&#9670;&#160;</a></span>tspTwoOptSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, std::vector&lt; unsigned &gt; &gt; Graph::tspTwoOptSwap </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; unsigned &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circuit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Realiza uma operação de troca 2-opt entre duas arestas do circuito para resolver (de forma aproximada) o Travelling Salesperson Problem (TSP). </p>
+<p >Complexidade Temporal: O(n), sendo n o tamanho do circuito encontrado antes da otimização </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cost</td><td>custo do circuito encontrado antes da operação de troca </td></tr>
+    <tr><td class="paramname">circuit</td><td>circuito encontrado antes da operação de troca </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>par cujo primeiro valor é o custo do circuito encontrado depois da operação de troca o segundo valor é o circuito encontrado depois da operação de troca </dd></dl>
+<div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a5ce0237f44c07ebc7dc159496ac65505_cgraph.png" border="0" usemap="#aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_cgraph" alt=""/></div>
+<map name="aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_cgraph" id="aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_cgraph">
+<area shape="rect" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="5,55,164,80"/>
+<area shape="rect" href="class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="215,5,338,31"/>
+<area shape="rect" href="class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="212,55,341,80"/>
+<area shape="rect" href="class_vertex.html#af2342e9ee875b1826eccbd3da2ef331f" title="Retorna (se existir) a aresta com origem no vértice e destino em vertex." alt="" coords="219,104,335,129"/>
+<area shape="rect" href="class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="393,5,482,31"/>
+<area shape="rect" href="class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="389,104,485,129"/>
+</map>
+</div>
+<div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graph_a5ce0237f44c07ebc7dc159496ac65505_icgraph.png" border="0" usemap="#aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_icgraph" alt=""/></div>
+<map name="aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_icgraph" id="aclass_graph_a5ce0237f44c07ebc7dc159496ac65505_icgraph">
+<area shape="rect" title="Realiza uma operação de troca 2&#45;opt entre duas arestas do circuito para resolver (de forma aproximada..." alt="" coords="941,5,1100,31"/>
+<area shape="rect" href="class_graph.html#a7e8f8c6629b93d8be7836962535b261c" title="Otimiza uma solução aproximada encontrada para o Travelling Salesperson Problem (TSP) através da heur..." alt="" coords="695,5,893,31"/>
+<area shape="rect" href="class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="512,5,647,31"/>
+<area shape="rect" href="class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="289,5,464,31"/>
+<area shape="rect" href="class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,5,241,31"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos dados membro</h2>
+<a id="a491012fc1bffb02701b0b0a16a678761" name="a491012fc1bffb02701b0b0a16a678761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491012fc1bffb02701b0b0a16a678761">&#9670;&#160;</a></span>edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Graph::edges = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9b0a6d8ad43c5eabaca5a7140bcc8b6" name="aa9b0a6d8ad43c5eabaca5a7140bcc8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b0a6d8ad43c5eabaca5a7140bcc8b6">&#9670;&#160;</a></span>vertexSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_vertex.html">Vertex</a> *&gt; Graph::vertexSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_graph_8h_source.html">Graph.h</a></li>
+<li><a class="el" href="_graph_8cpp.html">Graph.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

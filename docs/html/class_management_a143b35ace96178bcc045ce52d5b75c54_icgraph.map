@@ -1,0 +1,15 @@
+<map id="Management::isInt" name="Management::isInt">
+<area shape="rect" id="node1" title="Verifica se str é um número inteiro não negativo." alt="" coords="1688,130,1817,155"/>
+<area shape="rect" id="node2" href="$class_management.html#afd130eb8a34de069a8cde49a32fbf134" title="Lê o input do utilizador, forçando que seja um número inteiro não negativo." alt="" coords="1496,130,1640,155"/>
+<area shape="rect" id="node3" href="$class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,159,241,185"/>
+<area shape="rect" id="node5" href="$class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="812,165,987,190"/>
+<area shape="rect" id="node10" href="$class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1035,93,1237,133"/>
+<area shape="rect" id="node11" href="$class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1041,157,1231,197"/>
+<area shape="rect" id="node12" href="$class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1043,273,1229,298"/>
+<area shape="rect" id="node13" href="$class_management.html#a52b43f9d60bf05268b016461f8c15504" title="Valida um número inteiro, isto é, verifica se n pertence ao intervalo [min, max]. Enquanto o número f..." alt="" coords="1285,214,1448,239"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,159,56,185"/>
+<area shape="rect" id="node6" href="$class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,175,764,201"/>
+<area shape="rect" id="node7" href="$class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,123,499,163"/>
+<area shape="rect" id="node8" href="$class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,187,497,213"/>
+<area shape="rect" id="node9" href="$class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,237,531,277"/>
+</map>

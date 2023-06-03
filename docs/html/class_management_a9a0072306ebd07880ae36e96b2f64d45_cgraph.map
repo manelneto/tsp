@@ -1,0 +1,7 @@
+<map id="Management::readEdgesFile" name="Management::readEdgesFile">
+<area shape="rect" id="node1" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="5,31,193,56"/>
+<area shape="rect" id="node2" href="$class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="241,31,357,56"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="407,5,526,31"/>
+<area shape="rect" id="node4" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="405,55,528,80"/>
+<area shape="rect" id="node5" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="576,55,665,80"/>
+</map>

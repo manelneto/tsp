@@ -1,0 +1,20 @@
+<map id="Graph::mstPrim" name="Graph::mstPrim">
+<area shape="rect" id="node1" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="5,399,120,424"/>
+<area shape="rect" id="node2" href="$class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="183,5,299,31"/>
+<area shape="rect" id="node4" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="363,56,485,81"/>
+<area shape="rect" id="node6" href="$class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="179,107,303,132"/>
+<area shape="rect" id="node7" href="$class_mutable_priority_queue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title="Atualiza a prioridade do elemento x (aumentando&#45;a, diminuindo o índice) e reajusta a fila de priorida..." alt="" coords="168,157,315,197"/>
+<area shape="rect" id="node8" href="$class_mutable_priority_queue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title="Verifica se a fila de prioridade mutável não contém elementos, i. e., se o seu tamanho é 1." alt="" coords="168,221,315,261"/>
+<area shape="rect" id="node9" href="$class_mutable_priority_queue.html#a3880874d7364279ac0d6d31302b28853" title="Retorna o elemento mais prioritário (menor índice) da fila de prioridade mutável, retira&#45;o da fila e ..." alt="" coords="168,285,315,325"/>
+<area shape="rect" id="node10" href="$class_edge.html#a5cda44e9ba257b03963a1ac301371a59" title="Retorna o destino da aresta." alt="" coords="189,349,294,375"/>
+<area shape="rect" id="node11" href="$class_edge.html#afd6d96365c7158f369125bf2958ca511" title="Retorna a distância da aresta." alt="" coords="177,399,306,424"/>
+<area shape="rect" id="node12" href="$class_vertex.html#a027ec4f44cde7ec1b6481854a2980127" title="Retorna a distância do vértice." alt="" coords="173,448,310,473"/>
+<area shape="rect" id="node13" href="$class_vertex.html#ad59ee17655ed5fc2e5da5aa68b98ac7f" title="Retorna o id do vértice." alt="" coords="193,497,289,523"/>
+<area shape="rect" id="node14" href="$class_edge.html#a6e8b08e91c0694b40edff0432fb612eb" title="Retorna a origem da aresta." alt="" coords="190,547,293,572"/>
+<area shape="rect" id="node15" href="$class_mutable_priority_queue.html#a058fc182052af82e10cc3719e448b62d" title="Insere o elemento x na fila de prioridade mutável e reajusta a fila." alt="" coords="168,597,315,637"/>
+<area shape="rect" id="node16" href="$class_vertex.html#aa4bd82105b85ee53a917391f4811cd8a" title="Indica se o vértice foi visitado." alt="" coords="182,661,301,687"/>
+<area shape="rect" id="node17" href="$class_vertex.html#aa1aebd234860e5b8165e0bdb6be5222e" title="Define a distância do vértice como distance." alt="" coords="173,711,310,736"/>
+<area shape="rect" id="node18" href="$class_vertex.html#abe4bc30005eec65e775d0cd51f456460" title="Define a aresta predecessora do vértice como path." alt="" coords="185,760,298,785"/>
+<area shape="rect" id="node3" href="$class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="365,5,483,31"/>
+<area shape="rect" id="node5" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="533,56,623,81"/>
+</map>

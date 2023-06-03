@@ -1,0 +1,6 @@
+<map id="Management::validateInt" name="Management::validateInt">
+<area shape="rect" id="node1" title="Valida um número inteiro, isto é, verifica se n pertence ao intervalo [min, max]. Enquanto o número f..." alt="" coords="5,31,168,56"/>
+<area shape="rect" id="node2" href="$class_management.html#afd130eb8a34de069a8cde49a32fbf134" title="Lê o input do utilizador, forçando que seja um número inteiro não negativo." alt="" coords="216,31,360,56"/>
+<area shape="rect" id="node3" href="$class_management.html#a143b35ace96178bcc045ce52d5b75c54" title="Verifica se str é um número inteiro não negativo." alt="" coords="423,5,552,31"/>
+<area shape="rect" id="node4" href="$class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6" title="Lê o input do utilizador." alt="" coords="408,55,567,80"/>
+</map>

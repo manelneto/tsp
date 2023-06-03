@@ -1,0 +1,18 @@
+<map id="Vertex::addEdge" name="Vertex::addEdge">
+<area shape="rect" id="node1" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="1733,70,1852,95"/>
+<area shape="rect" id="node2" href="$class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="1569,70,1685,95"/>
+<area shape="rect" id="node3" href="$class_graph.html#afd313301739057ac1af4bbb51147f277" title="Determina uma Minimum Cost Spanning Tree (MST) do grafo através do algoritmo de Prim." alt="" coords="1370,17,1485,42"/>
+<area shape="rect" id="node8" href="$class_management.html#a9a0072306ebd07880ae36e96b2f64d45" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="1333,70,1521,95"/>
+<area shape="rect" id="node14" href="$class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="1334,134,1521,159"/>
+<area shape="rect" id="node4" href="$class_graph.html#a185d52aac9cae561fc650c519b5492bd" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="812,13,1035,38"/>
+<area shape="rect" id="node5" href="$class_management.html#a71c7bae62a2b7ada96fa7988d45dcfae" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma heurística de apr..." alt="" coords="289,5,531,45"/>
+<area shape="rect" id="node6" href="$class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,106,241,131"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,106,56,131"/>
+<area shape="rect" id="node9" href="$class_management.html#a11596d7b75a3ec4ec5630d143e6b6a5c" title="Lê um Real&#45;World Graph." alt="" coords="1089,63,1279,103"/>
+<area shape="rect" id="node10" href="$class_management.html#ad943e13af733386a577e928fc3bb231c" title="Lê os ficheiros de dados, depois de limpar os dados anteriores." alt="" coords="836,134,1011,159"/>
+<area shape="rect" id="node11" href="$class_management.html#a5af65dfd4f7389d3d8b7c9df22494cc5" title="Verifica se os ficheiros de dados foram lidos, i. e., se existem dados para analisar...." alt="" coords="579,106,764,131"/>
+<area shape="rect" id="node12" href="$class_management.html#a9a681204c7811e98cc7d59d7e71710c0" title="Resolve o Travelling Salesperson Problem (TSP) através de um algoritmo de backtracking." alt="" coords="321,69,499,109"/>
+<area shape="rect" id="node13" href="$class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="323,134,497,159"/>
+<area shape="rect" id="node15" href="$class_management.html#a6f1ad2a8d1ecc20dae89fc4efa6f197e" title="Lê um Medium&#45;Size Graph." alt="" coords="1083,127,1285,167"/>
+<area shape="rect" id="node16" href="$class_management.html#a19ba50b8c65e3f48ae56d01a1897ce46" title="Lê um Toy Graph." alt="" coords="1091,191,1277,217"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Graph::findVertex" name="Graph::findVertex">
+<area shape="rect" id="node1" title="Procura o vértice do grafo pelo seu id." alt="" coords="5,5,128,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="176,5,265,31"/>
+</map>

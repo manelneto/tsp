@@ -1,0 +1,8 @@
+<map id="Vertex::getNearestNeighbor" name="Vertex::getNearestNeighbor">
+<area shape="rect" id="node1" title="Retorna (se existir) a aresta com destino no vértice vizinho (adjacente) mais próximo por visitar." alt="" coords="921,5,1104,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a8a3b187badeaa702ee006cde7c40afca" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da heurística Nearest Ne..." alt="" coords="695,5,873,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#a2b7005561ddcfbf7c1e036ab77dd0ccb" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através da combinação de várias ..." alt="" coords="512,5,647,31"/>
+<area shape="rect" id="node4" href="$class_management.html#ae38c0c42bf0fd4c96f4d3f251e766a17" title="Resolve (de forma aproximada) o Travelling Salesperson Problem (TSP) através de uma combinação de heu..." alt="" coords="289,5,464,31"/>
+<area shape="rect" id="node5" href="$class_management.html#a500dd48e210cc0325973fa9a588d45d2" title="Apresenta o menu principal e permite selecionar uma das opções apresentadas." alt="" coords="104,5,241,31"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>

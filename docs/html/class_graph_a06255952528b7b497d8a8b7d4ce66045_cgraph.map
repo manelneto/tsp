@@ -1,0 +1,5 @@
+<map id="Graph::addVertex" name="Graph::addVertex">
+<area shape="rect" id="node1" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="5,5,129,31"/>
+<area shape="rect" id="node2" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="177,5,300,31"/>
+<area shape="rect" id="node3" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="348,5,437,31"/>
+</map>

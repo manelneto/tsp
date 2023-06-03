@@ -1,0 +1,14 @@
+<map id="Management::readRealWorldGraph" name="Management::readRealWorldGraph">
+<area shape="rect" id="node1" title="Lê um Real&#45;World Graph." alt="" coords="5,73,196,113"/>
+<area shape="rect" id="node2" href="$class_management.html#a9a0072306ebd07880ae36e96b2f64d45" title="Lê o ficheiro de arestas e preenche o grafo com as arestas." alt="" coords="244,104,432,129"/>
+<area shape="rect" id="node7" href="$class_management.html#afd130eb8a34de069a8cde49a32fbf134" title="Lê o input do utilizador, forçando que seja um número inteiro não negativo." alt="" coords="480,31,624,56"/>
+<area shape="rect" id="node10" href="$class_management.html#a9ae7f3d7dd35dc0a0e2dd8e6eb5afa7c" title="Lê o ficheiro de nós e cria os nós do grafo." alt="" coords="244,153,432,179"/>
+<area shape="rect" id="node12" href="$class_management.html#a52b43f9d60bf05268b016461f8c15504" title="Valida um número inteiro, isto é, verifica se n pertence ao intervalo [min, max]. Enquanto o número f..." alt="" coords="257,55,419,80"/>
+<area shape="rect" id="node3" href="$class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="494,104,610,129"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="692,104,811,129"/>
+<area shape="rect" id="node5" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="690,153,813,179"/>
+<area shape="rect" id="node6" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="879,179,968,204"/>
+<area shape="rect" id="node8" href="$class_management.html#a143b35ace96178bcc045ce52d5b75c54" title="Verifica se str é um número inteiro não negativo." alt="" coords="687,5,816,31"/>
+<area shape="rect" id="node9" href="$class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6" title="Lê o input do utilizador." alt="" coords="672,55,831,80"/>
+<area shape="rect" id="node11" href="$class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="490,153,614,179"/>
+</map>

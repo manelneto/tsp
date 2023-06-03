@@ -1,0 +1,13 @@
+<map id="Management::readToyGraph" name="Management::readToyGraph">
+<area shape="rect" id="node1" title="Lê um Toy Graph." alt="" coords="5,129,192,155"/>
+<area shape="rect" id="node2" href="$class_management.html#a9ee0cf00268769c605d5f91bd86ed187" title="Lê o ficheiro do grafo e cria o grafo." alt="" coords="240,67,427,92"/>
+<area shape="rect" id="node8" href="$class_management.html#afd130eb8a34de069a8cde49a32fbf134" title="Lê o input do utilizador, forçando que seja um número inteiro não negativo." alt="" coords="475,180,619,205"/>
+<area shape="rect" id="node11" href="$class_management.html#a52b43f9d60bf05268b016461f8c15504" title="Valida um número inteiro, isto é, verifica se n pertence ao intervalo [min, max]. Enquanto o número f..." alt="" coords="252,180,415,205"/>
+<area shape="rect" id="node3" href="$class_graph.html#aebef256c5ff91a1a4f3dc33bed067356" title="Adiciona ao grafo uma aresta bidirecional com origem no vértice de id orig e destino no vértice de id..." alt="" coords="489,5,605,31"/>
+<area shape="rect" id="node6" href="$class_graph.html#a8983d3c1b5cc85ff97b122b66f640fdc" title="Retorna o tamanho (número de nós) do grafo." alt="" coords="873,80,963,105"/>
+<area shape="rect" id="node7" href="$class_graph.html#a06255952528b7b497d8a8b7d4ce66045" title="Adiciona ao grafo um vértice com id, longitude e latitude." alt="" coords="485,55,609,80"/>
+<area shape="rect" id="node4" href="$class_vertex.html#a760a54237266f59815e5b14cee6a5124" title="Adiciona ao vértice um aresta com destino dest e distância distance." alt="" coords="687,5,805,31"/>
+<area shape="rect" id="node5" href="$class_graph.html#a9abc0a3e3036c08d5edc99328e6b658b" title="Procura o vértice do grafo pelo seu id." alt="" coords="685,55,807,80"/>
+<area shape="rect" id="node9" href="$class_management.html#a143b35ace96178bcc045ce52d5b75c54" title="Verifica se str é um número inteiro não negativo." alt="" coords="681,168,811,193"/>
+<area shape="rect" id="node10" href="$class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6" title="Lê o input do utilizador." alt="" coords="667,217,825,243"/>
+</map>

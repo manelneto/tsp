@@ -1,0 +1,5 @@
+<map id="Management::readInt" name="Management::readInt">
+<area shape="rect" id="node1" title="Lê o input do utilizador, forçando que seja um número inteiro não negativo." alt="" coords="5,31,149,56"/>
+<area shape="rect" id="node2" href="$class_management.html#a143b35ace96178bcc045ce52d5b75c54" title="Verifica se str é um número inteiro não negativo." alt="" coords="212,5,341,31"/>
+<area shape="rect" id="node3" href="$class_management.html#a1fda9479676dd4cd997c2b2b90beb2a6" title="Lê o input do utilizador." alt="" coords="197,55,356,80"/>
+</map>
